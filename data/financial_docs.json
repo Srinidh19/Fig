@@ -374,5 +374,21 @@
     "title": "National Pension System (NPS)",
     "keywords": ["nps", "pension", "retirement", "tax benefit", "80c", "80ccd", "pfrda"],
     "content": "The National Pension System (NPS) is a voluntary retirement savings scheme regulated by PFRDA. It allows individuals to systematically invest during their working years to build a retirement corpus. Upon turning 60, up to 60% of the corpus can be withdrawn tax-free, while the remaining 40% must be used to purchase an annuity for a regular monthly pension. NPS offers an exclusive additional tax deduction of Rs. 50,000 under Section 80CCD(1B), over and above the Rs. 1.5 Lakh limit under Section 80C."
+  },
+  {
+    "id": "en_money_management",
+    "category": "budgeting",
+    "language": "en",
+    "title": "Effective Money Management and Allocation",
+    "keywords": ["money management", "salary", "handling money", "savings", "allocation", "budgeting", "emergency"],
+    "content": "Handling money effectively requires a disciplined approach to allocation. Start by 'paying yourself first'—automate 20% of your income into savings and investments before any expenses. Maintain a strict division: 50% for absolute needs (rent, utilities, groceries), 30% for wants (dining out, entertainment), and 20% for future financial freedom. Always build an emergency fund equivalent to 6 months of expenses, clear high-interest debts like credit cards first, and avoid lifestyle inflation when your salary increases."
+  },
+  {
+    "id": "en_stock_market_basics",
+    "category": "investments",
+    "language": "en",
+    "title": "Stock Market Basics for Beginners",
+    "keywords": ["stocks", "share market", "investing", "nifty", "sensex", "equity", "dividends"],
+    "content": "Investing in the stock market means buying partial ownership (shares) in publicly traded companies. As the company's profits grow, the value of your shares increases (capital appreciation), and they may also pay you a portion of profits as 'dividends'. For beginners, it's safer to invest in Index Funds or ETFs (like Nifty 50) rather than picking individual stocks, as this provides instant diversification. Always invest for the long term (5+ years) to ride out market volatility, and never invest money you might need urgently."
   }
 ]
