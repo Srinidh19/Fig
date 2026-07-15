@@ -1365,7 +1365,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -1374,12 +1375,12 @@ body {
 .app-window {
   display: flex;
   width: 100%;
-  max-width: 1300px;
-  height: 92vh;
-  min-height: 700px;
+  max-width: none;
+  height: 100vh;
+  max-height: 100vh;
   background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -1496,7 +1497,9 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #f8fafc;
+  background-color: #ffffff;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .main-header {
@@ -1543,6 +1546,7 @@ body {
   flex: 1;
   position: relative;
   overflow: hidden;
+  min-height: 0;
 }
 
 .view-panel {
