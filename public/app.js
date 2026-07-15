@@ -548,7 +548,7 @@ function setupFileAttachments() {
         
         // Simulate a delay for parsing the document locally
         setTimeout(() => {
-          injectBotMessage(`📄 **File Attached Successfully:** ${file.name}<br><br><i>I have securely scanned this document and loaded its text into my active knowledge base. Please type what you would like me to analyze from this document!</i>`);
+          injectBotMessage(`📄 **File Attached Successfully:** ${file.name}\n\n*I have securely scanned this document and loaded its text into my active knowledge base. Please type what you would like me to analyze from this document!*`);
         }, 1200);
         
         e.target.value = ''; // Reset input

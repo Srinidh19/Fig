@@ -25,7 +25,7 @@
     <aside class="sidebar">
       <div class="brand">
         <div class="brand-icon-wrapper">
-          <i class="fa-solid fa-graduation-cap brand-logo"></i>
+          <img src="logo.png" class="brand-logo" alt="FinMentor Logo" style="width: 26px; height: 26px; object-fit: contain; border-radius: 4px;">
         </div>
         <div class="brand-text">
           <h1 class="gradient-logo">Fin<span>Mentor</span></h1>
@@ -43,6 +43,23 @@
         <button class="nav-btn" data-view="finance-tools">
           <i class="fa-solid fa-calculator"></i> Financial Tools
         </button>
+        
+        <div style="margin-top: 2rem;">
+          <p class="menu-label">Beginner Docs</p>
+          <button class="nav-btn" onclick="document.getElementById('chatInput').value='Explain what a PAN Card is and why it is necessary.'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+            <i class="fa-solid fa-id-card"></i> PAN Card Guide
+          </button>
+          <button class="nav-btn" onclick="document.getElementById('chatInput').value='Explain what Aadhaar is and its benefits.'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+            <i class="fa-solid fa-fingerprint"></i> Aadhaar Basics
+          </button>
+          <button class="nav-btn" onclick="document.getElementById('chatInput').value='How to file an Income Tax Return (ITR)?'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+            <i class="fa-solid fa-file-invoice-dollar"></i> ITR Filing
+          </button>
+          <button class="nav-btn" onclick="document.getElementById('chatInput').value='What is the National Pension System (NPS)?'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+            <i class="fa-solid fa-piggy-bank"></i> NPS Retirement
+          </button>
+        </div>
+
         <div style="margin-top: 2rem;">
           <p class="menu-label">Recent Chats</p>
           <div id="sidebarChatHistory" style="display: flex; flex-direction: column; gap: 0.5rem; overflow-y: auto; max-height: 250px;">
@@ -159,6 +176,7 @@
                     <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Help me spot a scam message';"><i class="fa-solid fa-shield-halved"></i> Spot Scam</button>
                     <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='How should I allocate my monthly salary?';"><i class="fa-solid fa-wallet"></i> Money Manager</button>
                     <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Explain the basics of investing in the Stock Market';"><i class="fa-solid fa-chart-line"></i> Stock Market</button>
+                    <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='How do I calculate EMI for a loan?';"><i class="fa-solid fa-calculator"></i> EMI Basics</button>
                     <button type="button" class="pill-btn" onclick="window.open('https://www.rbi.org.in/', '_blank');" title="External Reference"><i class="fa-solid fa-book"></i> RBI Guidelines</button>
                   </div>
                 </div>
