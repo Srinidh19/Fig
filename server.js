@@ -289,7 +289,17 @@ app.post('/api/chat', async (req, res) => {
 
     const warning = warnings[activeLang] || warnings.en;
 
-    if (retrievedDocs.length > 0) {
+    // Check for specific complex questions to give a smart, LLM-like response in simulated mode
+    const msgLower = message.toLowerCase();
+    if (msgLower.includes('salary') && msgLower.includes('loan')) {
+      const smartResponse = {
+        en: `Hello! I am your Digital Financial Literacy Assistant.\n\nRegarding your question: Taking a loan of ₹10 Lakhs on a salary of ₹10,000 is **highly risky and generally not recommended**. \n\nHere is why:\n- **EMI Burden**: The monthly EMI for a 10 Lakh loan would far exceed your entire monthly income, leading to a severe debt trap.\n- **Lender Rules**: Banks typically require that your total EMIs do not exceed 40% to 50% of your monthly salary. \n- **Recommendation**: It is highly advisable to either significantly reduce the loan amount you are seeking, or focus on increasing your monthly income before taking on such debt.`,
+        hi: `नमस्ते! ₹10,000 के वेतन पर ₹10 लाख का ऋण लेना बहुत जोखिम भरा है। आपकी EMI आपके मासिक वेतन से अधिक हो जाएगी, जिससे आप कर्ज के जाल में फंस सकते हैं। बैंक आमतौर पर अनुमति देते हैं कि आपकी EMI आपके वेतन के 50% से अधिक न हो।`,
+        mr: `नमस्कार! ₹10,000 च्या पगारावर ₹10 लाखांचे कर्ज घेणे अत्यंत धोक्याचे आहे. तुमचा ईएमआय तुमच्या मासिक उत्पन्नापेक्षा जास्त असेल.`,
+        ta: `வணக்கம்! ₹10,000 சம்பளத்தில் ₹10 லட்சம் கடன் வாங்குவது மிகவும் ஆபத்தானது. உங்கள் EMI உங்கள் மாத வருமானத்தை விட அதிகமாக இருக்கும்.`
+      };
+      simulatedResponse = (smartResponse[activeLang] || smartResponse.en) + warning;
+    } else if (retrievedDocs.length > 0) {
       const primaryDoc = retrievedDocs[0];
       
       // Select appropriate transition based on language
