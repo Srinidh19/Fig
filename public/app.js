@@ -513,7 +513,7 @@ document.addEventListener("DOMContentLoaded", () => {
     transitionToChatState();
     handleUserChatSubmit(e);
   });
-  dom.clearChatBtn.addEventListener('click', clearChatLogs);
+  if (dom.clearChatBtn) dom.clearChatBtn.addEventListener('click', clearChatLogs);
   
   // File attachment binding
   setupFileAttachments();
