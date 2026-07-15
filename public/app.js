@@ -687,7 +687,12 @@ function injectBotMessage(htmlContent) {
     <div class="message-bubble">${formatReplyText(htmlContent)}</div>
   `;
   dom.chatMessages.appendChild(msgDiv);
-  dom.chatMessages.scrollTop = dom.chatMessages.scrollHeight;
+  
+  if (msgDiv.offsetHeight > dom.chatMessages.clientHeight * 0.7) {
+    msgDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    dom.chatMessages.scrollTop = dom.chatMessages.scrollHeight;
+  }
 }
 
 function injectUserMessage(text) {
