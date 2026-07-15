@@ -10,7 +10,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+  etag: false,
+  lastModified: false,
+  setHeaders: (res, path) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  }
+}));
 
 // Load Financial Literacy Documents
 let documents = [];
@@ -329,8 +335,8 @@ What financial topic would you like to explore today?`,
   }
 });
 
-// Explicitly serve index.html for the root route (and any other unmatched routes for SPA)
-app.get('*', (req, res) => {
+// Explicitly serve index.html for unmatched routes (SPA fallback)
+app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
