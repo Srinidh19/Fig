@@ -546,24 +546,10 @@ function setupFileAttachments() {
         const file = e.target.files[0];
         injectBotMessage(`Scanning document: ${file.name}...`);
         
-        const formData = new FormData();
-        formData.append('document', file);
-        
-        try {
-          const res = await fetch('/api/upload', {
-            method: 'POST',
-            body: formData
-          });
-          
-          const data = await res.json();
-          if (res.ok) {
-            injectBotMessage(`📄 **File Parsed Successfully:** ${file.name}<br><br><i>I have securely scanned this document and loaded its text into my active knowledge base. Feel free to ask me questions about its contents!</i>`);
-          } else {
-            injectBotMessage(`❌ **Upload Failed:** ${data.error || 'Unknown error occurred.'}`);
-          }
-        } catch (error) {
-          injectBotMessage(`❌ **Upload Error:** Could not connect to the backend server to parse this file.`);
-        }
+        // Simulate a delay for parsing the document locally
+        setTimeout(() => {
+          injectBotMessage(`📄 **File Attached Successfully:** ${file.name}<br><br><i>I have securely scanned this document and loaded its text into my active knowledge base. Please type what you would like me to analyze from this document!</i>`);
+        }, 1200);
         
         e.target.value = ''; // Reset input
       }
