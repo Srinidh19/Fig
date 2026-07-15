@@ -1,0 +1,338 @@
+[
+  {
+    "id": "en_upi_basics",
+    "category": "upi",
+    "language": "en",
+    "title": "Introduction to UPI (Unified Payments Interface)",
+    "keywords": ["upi", "what is upi", "money transfer", "bank account", "npci", "vpa", "instant transfer"],
+    "content": "UPI (Unified Payments Interface) is a real-time payment system developed by the National Payments Corporation of India (NPCI). It allows users to link multiple bank accounts into a single smartphone application and transfer money instantly 24/7. With UPI, you do not need to remember bank account numbers or IFSC codes; you can send or receive money using a Virtual Payment Address (VPA), UPI ID, or mobile number."
+  },
+  {
+    "id": "en_upi_pin_safety",
+    "category": "upi",
+    "language": "en",
+    "title": "UPI PIN Safety Guidelines",
+    "keywords": ["upi pin", "safety", "password", "mpin", "receive money", "scam", "phishing"],
+    "content": "Your UPI PIN (Personal Identification Number) is a 4- or 6-digit password required to authorize money transfers out of your bank account. CRITICAL RULES: 1. You NEVER need to enter your UPI PIN to receive money. If someone asks you to enter your PIN to receive a payment, it is a scam. 2. Never share your UPI PIN, OTP, or passwords with anyone, including bank officials, customer care, or family. 3. Regularly change your UPI PIN and avoid using obvious numbers like date of birth or 1234."
+  },
+  {
+    "id": "en_upi_lite_autopay",
+    "category": "upi",
+    "language": "en",
+    "title": "UPI Lite and UPI AutoPay Explained",
+    "keywords": ["upi lite", "autopay", "offline", "limit", "recurring", "subscription"],
+    "content": "UPI Lite is an on-device wallet designed for small-value transactions under Rs. 500. It does not require a UPI PIN to initiate transfers, making payments faster and reducing bank statement clutter. The maximum wallet balance is Rs. 2,000. UPI AutoPay is a feature that allows you to set up recurring payments (e.g., monthly subscriptions, utility bills, mutual fund SIPs) up to Rs. 15,000 without entering your UPI PIN each time after the initial mandate setup."
+  },
+  {
+    "id": "en_scam_phishing",
+    "category": "scams",
+    "language": "en",
+    "title": "Avoiding Phishing and Smishing Scams",
+    "keywords": ["phishing", "smishing", "fake link", "sms", "email", "lottery", "gift card"],
+    "content": "Phishing involves fraudsters mimicking trusted entities (like banks, government, or courier services) via email or website links to steal credentials. Smishing is phishing carried out via SMS. Typically, they send messages like 'You won a lottery of Rs. 10 Lakhs, click here to claim' or 'Your electricity bill is unpaid, pay immediately via this link'. Never click on unsolicited links. Official banks or companies will never ask for sensitive data, PINs, or credentials via SMS or emails."
+  },
+  {
+    "id": "en_scam_kyc",
+    "category": "scams",
+    "language": "en",
+    "title": "KYC Update Fraud and Remote Access Scams",
+    "keywords": ["kyc update", "account blocked", "remote app", "anydesk", "teamviewer", "rustdesk", "otp"],
+    "content": "KYC (Know Your Customer) fraud occurs when scammers send urgent SMS alerts stating: 'Your bank account/SIM card is suspended. Please call this number to update your KYC.' Once you call, they instruct you to download remote access apps (such as AnyDesk, TeamViewer, or RustDesk). These apps allow scammers to view your mobile screen, intercept OTPs, and steal money from your bank accounts. Legitimate organizations never ask you to install remote access apps to perform official updates."
+  },
+  {
+    "id": "en_scam_customer_care",
+    "category": "scams",
+    "language": "en",
+    "title": "Fake Customer Care Numbers on Search Engines",
+    "keywords": ["customer care", "google search", "fake number", "refund", "courier status", "support"],
+    "content": "When searching for customer support numbers of banks, e-commerce sites, or courier companies on Google Search, be extremely careful. Scammers upload fake support numbers to directories and search results. When you dial these numbers, fake agents claim your payment failed or refund is pending, then trick you into sending money or sharing OTPs. Always look for official customer support numbers directly on the organization's verified website, app, or bank passbook, never trust random search listings."
+  },
+  {
+    "id": "en_interest_basics",
+    "category": "interest",
+    "language": "en",
+    "title": "Simple vs Compound Interest & Savings Vehicles",
+    "keywords": ["simple interest", "compound interest", "fd", "rd", "fixed deposit", "recurring deposit", "savings"],
+    "content": "Simple Interest (SI) is calculated only on the principal amount: SI = (P * R * T) / 100. Compound Interest (CI) is calculated on the principal plus the accumulated interest of previous periods, meaning you earn 'interest on interest', causing savings to grow exponentially. Fixed Deposits (FD) let you deposit a lump sum for a fixed tenure at a higher, guaranteed interest rate. Recurring Deposits (RD) allow you to save a fixed monthly sum and earn interest on it, suitable for regular savers."
+  },
+  {
+    "id": "en_interest_loans",
+    "category": "interest",
+    "language": "en",
+    "title": "Understanding Loan Interest: Flat vs Reducing Rates",
+    "keywords": ["flat rate", "reducing rate", "reducing balance", "loan", "emi", "interest rate", "tenure"],
+    "content": "When borrowing, interest can be calculated in two ways: Flat Rate and Reducing Balance. In a Flat Rate loan, interest is calculated on the initial principal for the entire tenure. This means the interest remains constant, even as you pay down the principal. In a Reducing Balance loan, interest is calculated on the remaining outstanding principal. As you pay EMIs, the outstanding balance decreases, and the interest portion of your EMI drops. A Reducing Balance loan is always cheaper and more transparent than a Flat Rate loan with the same numerical interest rate."
+  },
+  {
+    "id": "en_budgeting_rule",
+    "category": "budgeting",
+    "language": "en",
+    "title": "The 50/30/20 Budgeting Rule",
+    "keywords": ["50/30/20 rule", "budgeting", "needs", "wants", "savings", "monthly income", "expense tracker"],
+    "content": "The 50/30/20 rule is a simple personal finance guideline for allocating monthly post-tax income: 1. 50% for Needs: Essential expenses like rent, groceries, utility bills, insurance, and loan minimum payments. 2. 30% for Wants: Non-essential spending like dining out, entertainment, shopping, and hobbies. 3. 20% for Savings & Debt Payoff: Investments, retirement savings, emergency fund contributions, and extra debt payments. Tracking expenses regularly helps ensure you maintain this balance."
+  },
+  {
+    "id": "en_budgeting_emergency_fund",
+    "category": "budgeting",
+    "language": "en",
+    "title": "Building an Emergency Fund",
+    "keywords": ["emergency fund", "savings", "liquidity", "job loss", "medical emergency", "safety net"],
+    "content": "An emergency fund is a dedicated savings cushion reserved strictly for unplanned expenses, such as sudden medical bills, home repairs, or job loss. Financial experts recommend saving 3 to 6 months' worth of basic living expenses. This fund should be kept in a highly liquid and safe account, such as a high-interest savings account or short-term fixed deposit, so it is easily accessible during crisis, preventing you from taking high-interest loans."
+  },
+  {
+    "id": "hi_upi_basics",
+    "category": "upi",
+    "language": "hi",
+    "title": "यूपीआई (Unified Payments Interface) का परिचय",
+    "keywords": ["यूपीआई", "यूपीआई क्या है", "मनी ट्रांसफर", "बैंक खाता", "एनपीसीआई", "तुरंत ट्रांसफर"],
+    "content": "यूपीआई (यूनिफाइड पेमेंट्स इंटरफेस) भारतीय राष्ट्रीय भुगतान निगम (NPCI) द्वारा विकसित एक रीयल-टाइम भुगतान प्रणाली है। यह उपयोगकर्ताओं को एक ही स्मार्टफोन एप्लिकेशन में कई बैंक खातों को जोड़ने और 24/7 तुरंत पैसे ट्रांसफर करने की अनुमति देता है। यूपीआई के साथ, आपको बैंक खाता संख्या या आईएफएससी कोड याद रखने की आवश्यकता नहीं है; आप वर्चुअल पेमेंट एड्रेस (VPA), यूपीआई आईडी या मोबाइल नंबर का उपयोग करके पैसे भेज या प्राप्त कर सकते हैं।"
+  },
+  {
+    "id": "hi_upi_pin_safety",
+    "category": "upi",
+    "language": "hi",
+    "title": "यूपीआई पिन सुरक्षा दिशानिर्देश",
+    "keywords": ["यूपीआई पिन", "सुरक्षा", "पासवर्ड", "एमपिन", "पैसे प्राप्त करना", "धोखाधड़ी"],
+    "content": "आपका यूपीआई पिन (व्यक्तिगत पहचान संख्या) आपके बैंक खाते से पैसे ट्रांसफर करने के लिए आवश्यक 4 या 6 अंकों का एक पासवर्ड है। महत्वपूर्ण नियम: 1. पैसे प्राप्त करने के लिए आपको कभी भी यूपीआई पिन दर्ज करने की आवश्यकता नहीं होती है। यदि कोई आपसे पैसे प्राप्त करने के लिए पिन दर्ज करने को कहता है, तो यह एक घोटाला (स्कैम) है। 2. अपना यूपीआई पिन, ओटीपी या पासवर्ड कभी भी किसी के साथ साझा न करें, चाहे वह बैंक अधिकारी हो या कोई भी। 3. नियमित रूप से अपना पिन बदलें और स्पष्ट नंबरों से बचें।"
+  },
+  {
+    "id": "hi_scam_phishing",
+    "category": "scams",
+    "language": "hi",
+    "title": "फ़िशिंग और एसएमएस घोटालों से बचाव",
+    "keywords": ["फ़िशिंग", "लॉटरी स्कैम", "फर्जी लिंक", "एसएमएस", "बिजली बिल", "इनाम"],
+    "content": "फ़िशिंग में जालसाज आपके संवेदनशील डेटा को चुराने के लिए ईमेल या नकली वेबसाइट लिंक के माध्यम से बैंक या सरकारी विभाग का रूप धरते हैं। वे एसएमएस के माध्यम से भी ऐसा करते हैं (जिसे स्मिशिंग कहते हैं)। आमतौर पर, वे संदेश भेजते हैं: 'आपने 10 लाख रुपये की लॉटरी जीती है, दावा करने के लिए यहां क्लिक करें' या 'आपका बिजली बिल बकाया है, इस लिंक पर क्लिक कर भुगतान करें'। ऐसे अज्ञात लिंक्स पर कभी क्लिक न करें। बैंक कभी भी एसएमएस या ईमेल द्वारा पिन या पासवर्ड नहीं मांगते।"
+  },
+  {
+    "id": "hi_scam_kyc",
+    "category": "scams",
+    "language": "hi",
+    "title": "केवाईसी अपडेट और रिमोट एक्सेस ऐप्स धोखाधड़ी",
+    "keywords": ["केवाईसी", "खाता ब्लॉक", "रिमोट ऐप", "एनीडेस्क", "टीमव्यूअर", "ओटीपी"],
+    "content": "केवाईसी (नो योर कस्टमर) धोखाधड़ी तब होती है जब धोखेबाज आपको एसएमएस भेजते हैं: 'आपका बैंक खाता/सिम ब्लॉक कर दिया गया है। अपना केवाईसी अपडेट करने के लिए इस नंबर पर कॉल करें।' कॉल करने पर, वे आपको एनीडेस्क (AnyDesk) या टीमव्यूअर (TeamViewer) जैसे रिमोट एक्सेस ऐप डाउनलोड करने के लिए कहते हैं। ये ऐप धोखेबाज़ों को आपके मोबाइल की स्क्रीन देखने और आपके खाते से पैसे चुराने की अनुमति देते हैं। कोई भी वैध संस्थान आपसे स्क्रीन-शेयरिंग ऐप डाउनलोड करने के लिए नहीं कहेगा।"
+  },
+  {
+    "id": "hi_interest_basics",
+    "category": "interest",
+    "language": "hi",
+    "title": "साधारण बनाम चक्रवृद्धि ब्याज और बचत",
+    "keywords": ["साधारण ब्याज", "चक्रवृद्धि ब्याज", "ब्याज दर", "एफडी", "आरडी", "बचत"],
+    "content": "साधारण ब्याज (SI) केवल मूलधन पर गिना जाता है: SI = (P * R * T) / 100। चक्रवृद्धि ब्याज (CI) मूलधन के साथ-साथ पिछले समय में मिले ब्याज पर भी लगाया जाता है, जिसे 'ब्याज पर ब्याज' कहा जाता है। इससे आपकी बचत तेजी से बढ़ती है। फिक्स्ड डिपॉजिट (FD) आपको एक निश्चित अवधि के लिए उच्च और सुरक्षित ब्याज दर पर एकमुश्त राशि जमा करने की सुविधा देता है। रिकरिंग डिपॉजिट (RD) में आप हर महीने एक निश्चित राशि बचा सकते हैं और उस पर ब्याज कमा सकते हैं।"
+  },
+  {
+    "id": "hi_budgeting_rule",
+    "category": "budgeting",
+    "language": "hi",
+    "title": "50/30/20 बजट नियम",
+    "keywords": ["50/30/20 नियम", "बजट", "आवश्यकताएं", "इच्छाएं", "बचत", "खर्च"],
+    "content": "50/30/20 नियम आपके मासिक खर्चों को व्यवस्थित करने का एक आसान तरीका है: 1. 50% आवश्यकताओं के लिए: आवश्यक खर्च जैसे किराया, राशन, बिजली का बिल, और ऋण की किस्तें। 2. 30% इच्छाओं के लिए: गैर-जरूरी खर्च जैसे बाहर खाना, घूमना, और मनोरंजन। 3. 20% बचत और निवेश के लिए: आपातकालीन फंड, सेवानिवृत्ति बचत, या अतिरिक्त कर्ज चुकाना। अपने मासिक खर्चों को ट्रैक करने से यह संतुलन बनाए रखने में मदद मिलती है।"
+  },
+  {
+    "id": "mr_upi_basics",
+    "category": "upi",
+    "language": "mr",
+    "title": "यूपीआय (Unified Payments Interface) ओळख आणि माहिती",
+    "keywords": ["यूपीआय", "यूपीआय म्हणजे काय", "पैसे पाठवणे", "बँक खाते", "एनपीसीआय"],
+    "content": "यूपीआय (Unified Payments Interface) ही नॅशनल पेमेंट्स कॉर्पोरेशन ऑफ इंडिया (NPCI) द्वारे विकसित केलेली रिअल-टाइम पेमेंट सिस्टम आहे. याद्वारे तुम्ही तुमच्या स्मार्टफोनवर एकाच ॲपमध्ये अनेक बँक खाती लिंक करू शकता आणि 24/7 कधीही त्वरित पैसे ट्रान्सफर करू शकता. यूपीआय वापरताना बँक खाते क्रमांक किंवा आयएफएससी कोडची आवश्यकता नसते; तुम्ही यूपीआय आयडी (VPA) किंवा मोबाईल नंबर वापरून सुरक्षितपणे व्यवहार करू शकता."
+  },
+  {
+    "id": "mr_upi_pin_safety",
+    "category": "upi",
+    "language": "mr",
+    "title": "यूपीआय पिन सुरक्षितता नियम",
+    "keywords": ["यूपीआय पिन", "सुरक्षितता", "पासवर्ड", "एमपिन", "पैसे मिळवणे", "फसवणूक"],
+    "content": "यूपीआय पिन (UPI PIN) हा तुमच्या बँक खात्यातून पैसे पाठवण्यासाठी आवश्यक असलेला ४ किंवा ६ अंकी गुप्त कोड आहे. महत्त्वाचे नियम: १. पैसे मिळवण्यासाठी (Receive) कधीही यूपीआय पिन टाकण्याची गरज नसते. जर कोणी तुम्हाला पैसे जमा करण्यासाठी पिन टाकायला सांगत असेल, तर ती फसवणूक आहे. २. तुमचा यूपीआय पिन, ओटीपी किंवा पासवर्ड बँक अधिकारी किंवा अनोळखी व्यक्तीसोबत कधीही शेअर करू नका. ३. तुमचा यूपीआय पिन वेळोवेळी बदलत राहा."
+  },
+  {
+    "id": "mr_scam_phishing",
+    "category": "scams",
+    "language": "mr",
+    "title": "फिशिंग आणि मेसेजद्वारे होणारी फसवणूक टाळा",
+    "keywords": ["फिशिंग", "लॉटरी", "बनावट लिंक", "एसएमएस", "वीज बिल", "फसवणूक"],
+    "content": "फिशिंग म्हणजे बनावट ईमेल किंवा लिंक पाठवून तुमची बँक खात्याची गोपनीय माहिती चोरणे. फसवणूक करणारे मेसेज पाठवतात, जसे की: 'तुम्हाला १० लाखांची लॉटरी लागली आहे, दावा करण्यासाठी येथे क्लिक करा' किंवा 'तुमचे वीज बिल भरले नाही, त्वरित वीज जोडणी खंडित केली जाईल, या लिंकवर क्लिक करा'. अशा कोणत्याही अनोळखी लिंकवर क्लिक करू नका. अधिकृत बँका कधीही अशा लिंक्स पाठवत नाहीत."
+  },
+  {
+    "id": "mr_scam_kyc",
+    "category": "scams",
+    "language": "mr",
+    "title": "केवायसी अपडेट आणि स्क्रीन शेअरिंग ॲप्स फसवणूक",
+    "keywords": ["केवायसी", "सिम ब्लॉक", "रिमोट ॲप", "एनीडेस्क", "टीमव्ह्यूअर", "ओटीपी"],
+    "content": "केवायसी (KYC) फसवणुकीत लुटारू मेसेज पाठवतात: 'तुमचे बँक खाते किंवा सिम ब्लॉक झाले आहे, केवायसी अपडेटसाठी त्वरित कॉल करा.' कॉल केल्यावर ते तुम्हाला एनीडेस्क (AnyDesk) किंवा टीमव्ह्यूअर (TeamViewer) सारखे ॲप्स डाउनलोड करायला सांगतात. हे ॲप्स तुमच्या फोनची स्क्रीन लुटारूंना दाखवतात, ज्यामुळे ते तुमचे बँक ओटीपी चोरून पैसे लंपास करतात. बँका कधीही असे ॲप्स डाउनलोड करण्यास सांगत नाहीत."
+  },
+  {
+    "id": "mr_interest_basics",
+    "category": "interest",
+    "language": "mr",
+    "title": "सरळव्याज विरुद्ध चक्रवाढ व्याज आणि मुदत ठेव",
+    "keywords": ["सरळव्याज", "चक्रवाढ व्याज", "मुदत ठेव", "ब्याज दर", "एफडी", "बचत"],
+    "content": "सरळव्याज (Simple Interest) फक्त मूळ रकमेवर दिले जाते. चक्रवाढ व्याज (Compound Interest) मूळ रक्कम अधिक पूर्वी मिळालेले व्याज यावर मोजले जाते, ज्याला 'व्याजावर व्याज' म्हणतात. चक्रवाढ व्याजामुळे तुमचे पैसे वेगाने वाढतात. मुदत ठेव (Fixed Deposit - FD) मध्ये तुम्ही एकरकमी रक्कम जास्त व्याजदराने विशिष्ट कालावधीसाठी सुरक्षित ठेवू शकता. आवर्ती ठेव (Recurring Deposit - RD) मध्ये दरमहा ठराविक बचत करून त्यावर व्याज मिळवता येते."
+  },
+  {
+    "id": "mr_budgeting_rule",
+    "category": "budgeting",
+    "language": "mr",
+    "title": "५०/३०/२० बजेटचा नियम",
+    "keywords": ["५०/३०/२० नियम", "बजेट", "गरजा", "इच्छा", "बचत", "खर्च"],
+    "content": "५०/३०/२० चा नियम वैयक्तिक आर्थिक नियोजनासाठी उपयुक्त आहे: १. ५०% गरजांसाठी: घरभाडे, किराणा, वीज बिल आणि कर्जाचे हप्ते यासारखे अत्यावश्यक खर्च. २. ३०% तुमच्या आवडीनिवडींसाठी: हॉटेलिंग, सिनेमा, खरेदी यासारखे मौजमजेचे खर्च. ३. २०% बचत आणि गुंतवणुकीसाठी: आपत्कालीन निधी, भविष्य निर्वाह ठेव किंवा कर्जाची वेगाने परतफेड. यामुळे तुमचे बजेट संतुलित राहते."
+  },
+  {
+    "id": "ta_upi_basics",
+    "category": "upi",
+    "language": "ta",
+    "title": "UPI (Unified Payments Interface) அறிமுகம்",
+    "keywords": ["UPI", "பண பரிமாற்றம்", "வங்கி கணக்கு", "NPCI", "உடனடி பணம்"],
+    "content": "UPI என்பது இந்திய தேசிய கொடுப்பனவு கழகம் (NPCI) உருவாக்கிய ஒரு உடனடி பணப் பரிவர்த்தனை முறையாகும். இதன் மூலம் ஒரே மொபைல் செயலி வழியாக உங்கள் பல வங்கி கணக்குகளை இணைத்து, 24/7 எந்த நேரத்திலும் உடனடியாக பணம் அனுப்பலாம். இதற்கு வங்கி கணக்கு எண் அல்லது IFSC குறியீடு தேவையில்லை; ஒரு UPI ஐடி அல்லது மொபைல் எண்ணை வைத்தே எளிதாக பணம் அனுப்பவும் பெறவும் முடியும்."
+  },
+  {
+    "id": "ta_upi_pin_safety",
+    "category": "upi",
+    "language": "ta",
+    "title": "UPI பின் (PIN) பாதுகாப்பு வழிகாட்டுதல்கள்",
+    "keywords": ["UPI பின்", "பாதுகாப்பு", "கடவுச்சொல்", "பணம் பெற", "ஏமாற்றுதல்"],
+    "content": "UPI பின் என்பது உங்கள் கணக்கிலிருந்து பணம் அனுப்ப பயன்படும் 4 அல்லது 6 இலக்க ரகசிய குறியீடாகும். முக்கிய விதிகள்: 1. பணம் பெறுவதற்கு (Receive) நீங்கள் ஒருபோதும் UPI பின்னை உள்ளிட தேவையில்லை. யாராவது பணம் அனுப்ப பின்னை உள்ளிடுமாறு கேட்டால் அது மோசடியாகும். 2. உங்கள் UPI பின், OTP ஆகியவற்றை யாருடனும் பகிர வேண்டாம். 3. உங்கள் பின்னை அடிக்கடி மாற்றுங்கள், எளிதான எண்களை தவிர்க்கவும்."
+  },
+  {
+    "id": "ta_scam_phishing",
+    "category": "scams",
+    "language": "ta",
+    "title": "ஃபிஷிங் மற்றும் போலி லிங்க் மோசடிகளை தவிர்த்தல்",
+    "keywords": ["ஃபிஷிங்", "போலி லிங்க்", "எஸ்எம்எஸ்", "மின்சார கட்டணம்", "பரிசு", "மோசடி"],
+    "content": "ஃபிஷிங் என்பது வங்கிகள் அல்லது அரசு நிறுவனங்கள் போல் நடித்து போலி இணையதள லிங்க் அல்லது மின்னஞ்சல் மூலம் உங்கள் ரகசிய தகவல்களை திருடுவதாகும். எஸ்எம்எஸ் மூலமும் இத்தகைய லிங்குகளை அனுப்புவார்கள். 'உங்களுக்கு ரூ. 10 லட்சம் லாட்டரி விழுந்துள்ளது' அல்லது 'மின்சார கட்டணம் செலுத்தாததால் உடனடியாக இணைப்பு துண்டிக்கப்படும்' போன்ற செய்திகளுடன் வரும் லிங்குகளை ஒருபோதும் கிளிக் செய்ய வேண்டாம். எந்தவொரு வங்கியும் இப்படி லிங்க் அனுப்பாது."
+  },
+  {
+    "id": "ta_scam_kyc",
+    "category": "scams",
+    "language": "ta",
+    "title": "KYC அப்டேட் மற்றும் ஸ்கிரீன் ஷேரிங் ஆப் மோசடி",
+    "keywords": ["KYC", "சிம் முடக்கம்", "ரிமோட் ஆப்", "அனிடெஸ்க்", "டீம்வியூவர்", "மோசடி"],
+    "content": "மோசடி செய்பவர்கள் 'உங்கள் வங்கி கணக்கு/SIM கார்டு முடக்கப்பட்டுள்ளது, KYC அப்டேட் செய்ய உடனே இந்த எண்ணை தொடர்பு கொள்ளவும்' என குறுஞ்செய்தி அனுப்புவர். அவர்கள் கூறும் எண்ணை அழைத்தால், எனிடெஸ்க் (AnyDesk) அல்லது டீம்வியூவர் (TeamViewer) போன்ற ஆப்களை பதிவிறக்கம் செய்ய சொல்வார்கள். இந்த ஆப்ஸ்கள் உங்கள் மொபைல் திரையை அவர்களுக்கு காட்டி, உங்கள் கணக்கில் இருந்து பணத்தை திருட உதவும். வங்கிகள் ஒருபோதும் ரிமோட் ஆப்களை இன்ஸ்டால் செய்ய சொல்லாது."
+  },
+  {
+    "id": "ta_interest_basics",
+    "category": "interest",
+    "language": "ta",
+    "title": "தனிவட்டி மற்றும் கூட்டு வட்டி & நிலையான வைப்பு",
+    "keywords": ["தனிவட்டி", "கூட்டு வட்டி", "வட்டி வீதம்", "நிலையான வைப்பு", "FD", "சேமிப்பு"],
+    "content": "தனிவட்டி (Simple Interest) என்பது அசல் தொகைக்கு மட்டுமே கணக்கிடப்படும். கூட்டு வட்டி (Compound Interest) என்பது அசல் மற்றும் முந்தைய வட்டி ஆகியவற்றின் மீது கணக்கிடப்படும். அதாவது 'வட்டிக்கு வட்டி' பெறுவதன் மூலம் சேமிப்பு வேகமாக வளரும். நிலையான வைப்புத்தொகை (Fixed Deposit - FD) என்பது ஒரு குறிப்பிட்ட காலத்திற்கு அதிக மற்றும் உறுதியான வட்டி விகிதத்தில் சேமிக்க உதவுகிறது. தொடர் வைப்புத்தொகை (RD) மூலம் மாதந்தோறும் ஒரு குறிப்பிட்ட தொகையை சேமிக்கலாம்."
+  },
+  {
+    "id": "ta_budgeting_rule",
+    "category": "budgeting",
+    "language": "ta",
+    "title": "50/30/20 பட்ஜெட் விதிமுறை",
+    "keywords": ["50/30/20 விதி", "பட்ஜெட்", "தேவைகள்", "விருப்பங்கள்", "சேமிப்பு", "திட்டமிடல்"],
+    "content": "50/30/20 விதி என்பது உங்கள் வருமானத்தை பிரித்து செலவிட உதவும் எளிய வழியாகும்: 1. 50% தேவைகள் (Needs): வாடகை, மளிகை, மின்சார கட்டணம், கடன் தவணை போன்ற தவிர்க்க முடியாதவை. 2. 30% விருப்பங்கள் (Wants): பொழுதுபோக்கு, வெளி உணவகம், ஷாப்பிங் போன்ற ஆசைகள். 3. 20% சேமிப்பு மற்றும் முதலீடு (Savings): அவசரகால நிதி, எதிர்கால சேமிப்பு மற்றும் கூடுதல் கடன் அடைத்தல். மாதாந்திர செலவுகளை கண்காணிப்பது உங்கள் நிதி நிலையை பலப்படுத்தும்."
+  },
+  {
+    "id": "bn_upi_basics",
+    "category": "upi",
+    "language": "bn",
+    "title": "ইউপিআই (Unified Payments Interface) পরিচিতি এবং ব্যবহার",
+    "keywords": ["ইউপিআই", "টাকা পাঠানো", "ব্যাংক অ্যাকাউন্ট", "এনপিসিআই", "ইনস্ট্যান্ট ট্রান্সফার"],
+    "content": "ইউপিআই (Unified Payments Interface) হল ভারতের ন্যাশনাল পেমেন্টস কর্পোরেশন (NPCI) দ্বারা উন্নত একটি রিয়েল-টাইম পেমেন্ট সিস্টেম। এর সাহায্যে আপনি আপনার স্মার্টফোনে একটি অ্যাপেই একাধিক ব্যাংক অ্যাকাউন্ট যুক্ত করতে পারেন এবং ২৪/৭ যেকোনো সময় তৎক্ষণাৎ টাকা পাঠাতে পারেন। ইউপিআই-তে ব্যাংক অ্যাকাউন্ট বা আইএফএসসি কোড মনে রাখার প্রয়োজন নেই; আপনি ইউপিআই আইডি (VPA) বা মোবাইল নম্বর ব্যবহার করে টাকা পাঠাতে বা গ্রহণ করতে পারেন।"
+  },
+  {
+    "id": "bn_upi_pin_safety",
+    "category": "upi",
+    "language": "bn",
+    "title": "ইউপিআই পিন (PIN) সুরক্ষার নিয়ম",
+    "keywords": ["ইউপিআই পিন", "নিরাপত্তা", "পাসওয়ার্ড", "টাকা গ্রহণ", "জালিয়াতি"],
+    "content": "ইউপিআই পিন (UPI PIN) হল ৪ বা ৬ সংখ্যার একটি গোপন কোড যা আপনার ব্যাংক অ্যাকাউন্ট থেকে টাকা পাঠানোর জন্য প্রয়োজন। মূল নিয়মাবলি: ১. টাকা পাওয়ার জন্য (Receive) আপনাকে কখনোই ইউপিআই পিন দিতে হবে না। কেউ টাকা পাঠানোর নামে পিন দিতে বললে তা নিশ্চিত জালিয়াতি। ২. আপনার ইউপিআই পিন বা ওটিপি (OTP) কারো সাথে শেয়ার করবেন না। ৩. আপনার পিন নিয়মিত পরিবর্তন করুন এবং সাধারণ সংখ্যা যেমন ১২৩৪ ব্যবহার এড়িয়ে চলুন।"
+  },
+  {
+    "id": "bn_scam_phishing",
+    "category": "scams",
+    "language": "bn",
+    "title": "ফিশিং এবং ভুয়ো মেসেজ জালিয়াতি এড়ানো",
+    "keywords": ["ফিশিং", "ভুয়ো লিঙ্ক", "এসএমএস", "বিদ্যুৎ বিল", "লটারি", "জালিয়াতি"],
+    "content": "ফিশিং হল প্রতারকদের দ্বারা তৈরি করা ব্যাংক বা সরকারি প্রতিষ্ঠানের নকল ওয়েবসাইট বা ইমেল, যার উদ্দেশ্য আপনার গোপন তথ্য চুরি করা। এরা এসএমএস-এর মাধ্যমেও ভুয়ো লিঙ্ক পাঠায় (স্মিশিং)। যেমন: 'আপনি ১০ লাখ টাকার লটারি জিতেছেন, দাবি করতে এই লিঙ্কে ক্লিক করুন' অথবা 'বিদ্যুৎ বিল বকেয়া রয়েছে, এখনই সংযোগ কেটে দেওয়া হবে, এই লিঙ্কে পে করুন'। কখনোই এই সব লিঙ্কে ক্লিক করবেন না। ব্যাংক কখনোই এই ধরণের লিঙ্ক পাঠায় না।"
+  },
+  {
+    "id": "bn_scam_kyc",
+    "category": "scams",
+    "language": "bn",
+    "title": "কেওয়াইসি আপডেট এবং স্ক্রিন শেয়ারিং অ্যাপ জালিয়াতি",
+    "keywords": ["কেওয়াইসি", "সিম ব্লক", "রিমোট অ্যাপ", "এনিডেস্ক", "টিমভিউয়ার", "ওটিপি"],
+    "content": "প্রতারকেরা মেসেজ পাঠায়: 'আপনার ব্যাংক অ্যাকাউন্ট বা সিম কার্ড ব্লক হয়ে গেছে। কেওয়াইসি আপডেট করার জন্য অবিলম্বে এই নম্বরে কল করুন।' কল করলে তারা আপনাকে এনিডেস্ক (AnyDesk) বা টিমভিউয়ার (TeamViewer) এর মত স্ক্রিন শেয়ারিং অ্যাপ ডাউনলোড করতে বলে। এই অ্যাপের মাধ্যমে তারা আপনার ফোনের স্ক্রিন দেখতে পায় এবং ওটিপি জেনে আপনার অ্যাকাউন্ট থেকে টাকা চুরি করে। কোনো ব্যাংক বা প্রতিষ্ঠান কখনোই এই ধরণের অ্যাপ ইনস্টল করতে বলবে না।"
+  },
+  {
+    "id": "bn_interest_basics",
+    "category": "interest",
+    "language": "bn",
+    "title": "সরল সুদ বনাম चक्रवृद्धि সুদ এবং স্থায়ী আমানত",
+    "keywords": ["সরল সুদ", "চক্রবৃদ্ধি সুদ", "স্থায়ী আমানত", "সুদের হার", "এফডি", "সঞ্চয়"],
+    "content": "সরল সুদ (Simple Interest) শুধুমাত্র মূলধনের উপর গণনা করা হয়। চক্রবৃদ্ধি সুদ (Compound Interest) মূলধন এবং তার সাথে পূর্বের অর্জিত সুদের উপর হিসাব করা হয়, যাকে 'সুদের ওপর সুদ' বলা হয়। চক্রবৃদ্ধি সুদের কারণে আপনার সঞ্চয় দ্রুত বৃদ্ধি পায়। স্থায়ী আমানত (Fixed Deposit - FD) আপনাকে নির্দিষ্ট মেয়াদের জন্য উচ্চ ও নিশ্চিত সুদের হারে একটি নির্দিষ্ট পরিমাণ টাকা জমা রাখার সুবিধা দেয়। রেকারিং ডিপোজিট (RD) এর মাধ্যমে প্রতি মাসে নির্দিষ্ট সঞ্চয় করা যায়।"
+  },
+  {
+    "id": "bn_budgeting_rule",
+    "category": "budgeting",
+    "language": "bn",
+    "title": "৫০/৩০/২০ বাজেটের নিয়ম",
+    "keywords": ["৫০/৩০/২০ নিয়ম", "বাজেট", "প্রয়োজন", "ইচ্ছা", "সঞ্চয়", "নিয়ন্ত্রণ"],
+    "content": "৫০/৩০/২০ নিয়ম হল আপনার মাসিক আয় বণ্টন করার একটি সহজ উপায়: ১. ৫০% প্রয়োজন (Needs): বাসা ভাড়া, বাজার খরচ, বিদ্যুৎ বিল এবং ঋণের কিস্তির মতো অপরিহার্য খরচ। ২. ৩০% ইচ্ছা (Wants): রেস্তোরাঁয় খাওয়া, সিনেমা, কেনাকাটার মতো শৌখিন খরচ। ৩. ২০% সঞ্চয় এবং ঋণ পরিশোধ (Savings): ইমারজেন্সি ফান্ড তৈরি, ভবিষ্যতের সঞ্চয় বা অতিরিক্ত ঋণ পরিশোধ। খরচ নিয়মিত ট্র্যাক করলে এই নিয়ম মেনে চলা সহজ হয়।"
+  },
+  {
+    "id": "en_rbi_role",
+    "category": "banking",
+    "language": "en",
+    "title": "Role of RBI (Reserve Bank of India)",
+    "keywords": ["rbi", "reserve bank of india", "central bank", "regulator", "monetary policy", "banks"],
+    "content": "The Reserve Bank of India (RBI) is India's central bank and regulatory body responsible for regulating the Indian banking system. It manages the country's money supply, prints currency, and formulates monetary policy. The RBI ensures the safety of depositors' money by regulating commercial banks and non-banking financial companies (NBFCs). It also manages foreign exchange and acts as a banker to the government and other banks."
+  },
+  {
+    "id": "en_financial_docs",
+    "category": "banking",
+    "language": "en",
+    "title": "Important Financial Documents: PAN, Aadhaar, ITR",
+    "keywords": ["pan card", "aadhaar", "itr", "income tax return", "kyc", "documents"],
+    "content": "Key financial documents in India include the PAN (Permanent Account Number) card, Aadhaar card, and ITR (Income Tax Return). PAN is a 10-digit alphanumeric number essential for tracking financial transactions and paying taxes. Aadhaar is a 12-digit unique identification number linked to biometrics, used universally for KYC (Know Your Customer) and government subsidies. ITR is a form submitted to the Income Tax Department declaring your income and taxes paid, which is crucial for applying for loans or visas."
+  },
+  {
+    "id": "en_pmjdy",
+    "category": "schemes",
+    "language": "en",
+    "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+    "keywords": ["pmjdy", "jan dhan", "zero balance", "bank account", "rupay card", "overdraft", "scheme"],
+    "content": "PMJDY is a National Mission for Financial Inclusion to ensure access to financial services like Banking, Savings, Remittances, Credit, Insurance, and Pension in an affordable manner. Key benefits include a zero-balance savings account, a free RuPay Debit card, inbuilt accident insurance cover of Rs 2 lakh, and an overdraft facility up to Rs 10,000 for eligible account holders."
+  },
+  {
+    "id": "en_pmsby",
+    "category": "schemes",
+    "language": "en",
+    "title": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+    "keywords": ["pmsby", "insurance", "accident", "premium", "scheme"],
+    "content": "PMSBY is a government-backed accident insurance scheme in India. It offers a one-year accidental death and disability cover, which can be renewed annually. For a minimal premium of just Rs 20 per annum (auto-debited from the bank account), it provides a risk coverage of Rs 2 lakh for accidental death and full disability, and Rs 1 lakh for partial disability."
+  },
+  {
+    "id": "en_apy",
+    "category": "schemes",
+    "language": "en",
+    "title": "Atal Pension Yojana (APY)",
+    "keywords": ["apy", "pension", "retirement", "scheme", "unorganized sector"],
+    "content": "Atal Pension Yojana (APY) is a guaranteed pension scheme primarily targeted at workers in the unorganized sector. Subscribers receive a guaranteed minimum monthly pension ranging from Rs 1,000 to Rs 5,000 after the age of 60 years, depending on their contributions. The contribution amount depends on the age at which the subscriber joins the scheme (between 18 and 40 years)."
+  },
+  {
+    "id": "en_mutual_funds_sip",
+    "category": "investments",
+    "language": "en",
+    "title": "Mutual Funds and Systematic Investment Plan (SIP)",
+    "keywords": ["mutual fund", "sip", "investment", "stock market", "equity", "compounding"],
+    "content": "A Mutual Fund pools money from many investors to purchase securities like stocks, bonds, and short-term debt. A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly (e.g., monthly) in a mutual fund scheme. SIPs help in Rupee Cost Averaging (buying more units when prices are low and fewer when high) and utilize the power of compounding to build long-term wealth."
+  },
+  {
+    "id": "en_cibil_score",
+    "category": "credit",
+    "language": "en",
+    "title": "CIBIL Score and Credit Health",
+    "keywords": ["cibil", "credit score", "loan", "emi", "default", "credit card"],
+    "content": "A CIBIL Score is a 3-digit numeric summary of your credit history, ranging from 300 to 900. It reflects your creditworthiness based on your past loan and credit card repayment behavior. A score closer to 900 (ideally above 750) makes it easier to get loans and credit cards approved at lower interest rates. To maintain a good score, pay your EMIs and credit card bills on time and do not utilize more than 30% of your credit card limit."
+  },
+  {
+    "id": "en_rbi_digital_lending",
+    "category": "banking",
+    "language": "en",
+    "title": "RBI Guidelines on Digital Lending",
+    "keywords": ["digital lending", "loan app", "rbi", "guidelines", "recovery", "data privacy"],
+    "content": "To protect borrowers from illegal loan apps, RBI mandated that all loan disbursals and repayments must be executed directly between the borrower's bank account and the Regulated Entity (RE), without passing through the account of a third-party lending service provider (LSP). Digital lending apps cannot access mobile phone resources like contacts, photos, or media. Borrowers must be provided with a Key Fact Statement (KFS) detailing the all-inclusive annual percentage rate (APR) before signing the contract."
+  }
+]

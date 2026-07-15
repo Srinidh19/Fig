@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraniteGuard - AI Agent for Digital Financial Literacy</title>
+  
+  <meta name="description" content="An intelligent, RAG-based AI Agent for Digital Financial Literacy, powered by IBM Granite. Learn UPI safety, avoid online scams, calculate compound interest and budget using the 50/30/20 rule.">
+  <meta name="keywords" content="financial literacy, upi safety, avoid scams, compound interest, budget calculator, ibm granite, rag agent, ai, aicte">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Window Container -->
+  <div class="app-window">
+    
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon-wrapper">
+          <i class="fa-solid fa-shield-halved brand-logo"></i>
+        </div>
+        <div class="brand-text">
+          <h1>Granite<span>Guard</span></h1>
+        </div>
+      </div>
+      
+      <div class="sidebar-menu">
+        <p class="menu-label">Features</p>
+        <button class="nav-btn active" data-view="chat">
+          <i class="fa-solid fa-message"></i> AI Chat
+        </button>
+        <button class="nav-btn" data-view="scam-game">
+          <i class="fa-solid fa-gamepad"></i> Spot the Scam
+        </button>
+        <button class="nav-btn" data-view="finance-tools">
+          <i class="fa-solid fa-calculator"></i> Financial Tools
+        </button>
+      </div>
+
+      <div class="sidebar-footer" style="display: none;">
+        <div class="upgrade-card status-simulated" id="connectionStatus" title="Toggle Watsonx config in settings">
+          <div class="upgrade-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h4>Granite AI Engine</h4>
+          <p class="status-text">Simulated Granite Mode</p>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <button class="upgrade-btn" id="openSettingsBtnSidebar">Connect Live API</button>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top Header -->
+      <header class="main-header">
+        <div class="header-breadcrumbs">
+          <span>GraniteGuard App</span> / <span id="currentViewName" style="color:var(--color-text-primary);font-weight:600;">AI Chat v1.0</span> <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i>
+        </div>
+        
+        <div class="header-controls">
+          <span class="control-label">Configuration</span>
+          
+          <div class="language-dropdown">
+            <button class="dropdown-btn" id="activeLangBtn">
+              <i class="fa-solid fa-language"></i> <span>English</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content" id="langOptions">
+              <a href="#" data-lang="en"><span class="flag">🇬🇧</span> English</a>
+              <a href="#" data-lang="hi"><span class="flag">🇮🇳</span> हिंदी (Hindi)</a>
+              <a href="#" data-lang="mr"><span class="flag">🇮🇳</span> मराठी (Marathi)</a>
+              <a href="#" data-lang="ta"><span class="flag">🇮🇳</span> தமிழ் (Tamil)</a>
+              <a href="#" data-lang="bn"><span class="flag">🇮🇳</span> বাংলা (Bengali)</a>
+            </div>
+          </div>
+          
+          <button class="icon-btn" id="openSettingsBtn" title="IBM Watsonx Settings">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          
+          <button class="export-btn">
+             Export <i class="fa-solid fa-arrow-up-from-bracket"></i>
+          </button>
+        </div>
+      </header>
+      
+      <!-- Views Container -->
+      <div class="view-container">
+        
+        <!-- ============================================== -->
+        <!-- VIEW: AI CHAT -->
+        <!-- ============================================== -->
+        <div id="view-chat" class="view-panel active">
+          
+          <div class="chat-messages" id="chatMessages">
+            <!-- Messages injected by JS -->
+          </div>
+
+          <!-- Chat Input Floating Bar -->
+          <div class="chat-input-wrapper">
+            <div class="prompt-suggestions" id="suggestionBox">
+              <!-- Suggetions injected by JS -->
+            </div>
+            
+            <form class="chat-input-area" id="chatForm">
+              <i class="fa-solid fa-wand-magic-sparkles input-icon-left"></i>
+              <input type="text" id="chatInput" placeholder="Type your request GraniteGuard will handle the rest" autocomplete="off" required>
+              <div class="input-actions">
+                <input type="file" id="chatFileInput" style="display: none;" accept=".pdf,.doc,.docx,.txt">
+                <button type="button" class="tool-icon-btn" id="attachBtnPlus" title="Add Document"><i class="fa-solid fa-plus"></i></button>
+                <button type="button" class="tool-icon-btn" id="attachBtnClip" title="Attach File"><i class="fa-solid fa-paperclip"></i></button>
+              </div>
+              <button type="button" class="voice-btn" id="voiceInputBtn" title="Voice Input">
+                <i class="fa-solid fa-microphone"></i>
+              </button>
+              <button type="submit" class="send-btn" id="sendMsgBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+          
+        </div>
+
+        <!-- ============================================== -->
+        <!-- VIEW: SCAM GAME -->
+        <!-- ============================================== -->
+        <div id="view-scam-game" class="view-panel" style="display:none;">
+          <div class="glass-card tab-content active" id="tab-scam-game">
+            <div class="game-header">
+              <div class="game-title-row">
+                <i class="fa-solid fa-shield-virus game-icon"></i>
+                <h3 id="gameHeadline">Scam Awareness Challenge</h3>
+              </div>
+              <div class="score-tracker">
+                <span id="scoreLabel">Score:</span> <strong id="gameScore">0 / 0</strong>
+              </div>
+            </div>
+
+            <div class="game-card">
+              <div class="scenario-bubble">
+                <div class="bubble-meta">
+                  <span id="scenarioType"><i class="fa-solid fa-message"></i> Incoming SMS</span>
+                  <span class="sender-id" id="scenarioSender">Sender: AD-AMZON</span>
+                </div>
+                <div class="bubble-content" id="scenarioText">
+                  "Dear Customer, you have won an Amazon Reward Card worth ₹25,000! Click here to claim your reward instantly: http://bit.ly/claim-amz-rewd"
+                </div>
+              </div>
+
+              <div class="game-actions">
+                <button class="game-btn btn-scam" id="scamBtn">
+                  <i class="fa-solid fa-skull-crossbones"></i>
+                  <span id="btnScamText">Identify as SCAM</span>
+                </button>
+                <button class="game-btn btn-safe" id="safeBtn">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span id="btnSafeText">Identify as SAFE</span>
+                </button>
+              </div>
+
+              <div class="feedback-card hidden" id="gameFeedback">
+                <div class="feedback-status">
+                  <i class="fa-solid" id="feedbackIcon"></i>
+                  <span id="feedbackResultText">Correct Answer!</span>
+                </div>
+                <p class="feedback-explanation" id="feedbackExplanation">
+                  This is a classic phishing message. Official sources never send prizes via random SMS.
+                </p>
+                <button class="next-btn" id="nextScenarioBtn">
+                  <span id="btnNextText">Next Scenario</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- VIEW: FINANCIAL TOOLS -->
+        <!-- ============================================== -->
+        <div id="view-finance-tools" class="view-panel" style="display:none;">
+          <div class="glass-card tab-content active" id="tab-finance-tools">
+            <div class="tools-container">
+              
+              <div class="calculator-selector">
+                <label for="calcSelect" id="calcSelectLabel">Select Utility:</label>
+                <select id="calcSelect">
+                  <option value="budget">50/30/20 Budget Planner</option>
+                  <option value="interest">Compound Interest Calculator</option>
+                  <option value="emi">Loan EMI Calculator</option>
+                </select>
+              </div>
+
+              <!-- Tool 1 -->
+              <div class="calculator-subpanel" id="calc-budget">
+                <h4 id="budgetHeader">50/30/20 Budget Allocator</h4>
+                <p class="calc-desc" id="budgetDesc">Divide your monthly income into Needs (50%), Wants (30%), and Savings/Debt payoff (20%).</p>
+                
+                <div class="form-group">
+                  <label for="budgetIncome" id="budgetIncomeLabel">Monthly Post-Tax Income (₹):</label>
+                  <input type="number" id="budgetIncome" value="30000" min="100">
+                </div>
+
+                <div class="budget-chart">
+                  <div class="budget-bar bar-needs" style="width: 50%">
+                    <span>Needs (50%)</span>
+                  </div>
+                  <div class="budget-bar bar-wants" style="width: 30%">
+                    <span>Wants (30%)</span>
+                  </div>
+                  <div class="budget-bar bar-savings" style="width: 20%">
+                    <span>Savings (20%)</span>
+                  </div>
+                </div>
+
+                <div class="budget-legend">
+                  <div class="legend-item">
+                    <span class="legend-color color-needs"></span>
+                    <div class="legend-info">
+                      <span id="needsText">Needs (Rent, Bills, Food)</span>
+                      <strong id="valNeeds">₹15,000</strong>
+                    </div>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-color color-wants"></span>
+                    <div class="legend-info">
+                      <span id="wantsText">Wants (Dining, Shopping, Movies)</span>
+                      <strong id="valWants">₹9,000</strong>
+                    </div>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-color color-savings"></span>
+                    <div class="legend-info">
+                      <span id="savingsText">Savings & Investments</span>
+                      <strong id="valSavings">₹6,000</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tool 2 -->
+              <div class="calculator-subpanel hidden" id="calc-interest">
+                <h4 id="interestHeader">Compound Interest Calculator</h4>
+                <p class="calc-desc" id="interestDesc">See how your money grows exponentially with compound interest.</p>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="interestPrincipal" id="intPrincipalLabel">Principal Deposit (₹):</label>
+                    <input type="number" id="interestPrincipal" value="10000" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="interestRate" id="intRateLabel">Annual Interest Rate (%):</label>
+                    <input type="number" id="interestRate" value="7.1" step="0.1" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="interestTenure" id="intTenureLabel">Tenure (Years):</label>
+                    <input type="number" id="interestTenure" value="5" min="1">
+                  </div>
+                  <div class="form-group">
+                    <label for="interestComp" id="intCompLabel">Compounding Frequency:</label>
+                    <select id="interestComp">
+                      <option value="12">Monthly</option>
+                      <option value="4">Quarterly</option>
+                      <option value="1">Annually</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="calc-results">
+                  <div class="result-box">
+                    <span id="intInvestedText">Total Invested</span>
+                    <strong id="valIntInvested">₹10,000</strong>
+                  </div>
+                  <div class="result-box">
+                    <span id="intEarnedText">Interest Earned</span>
+                    <strong id="valIntEarned" class="color-positive">₹4,244</strong>
+                  </div>
+                  <div class="result-box highlighted">
+                    <span id="intTotalText">Total Future Value</span>
+                    <strong id="valIntTotal">₹14,244</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tool 3 -->
+              <div class="calculator-subpanel hidden" id="calc-emi">
+                <h4 id="emiHeader">Loan EMI Calculator</h4>
+                <p class="calc-desc" id="emiDesc">Calculate monthly installment (EMI) and compare loan types.</p>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="emiAmount" id="emiAmountLabel">Loan Principal (₹):</label>
+                    <input type="number" id="emiAmount" value="100000" min="100">
+                  </div>
+                  <div class="form-group">
+                    <label for="emiRate" id="emiRateLabel">Interest Rate (% p.a.):</label>
+                    <input type="number" id="emiRate" value="10" step="0.1" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="emiTenure" id="emiTenureLabel">Tenure (Years):</label>
+                    <input type="number" id="emiTenure" value="3" min="1">
+                  </div>
+                  <div class="form-group">
+                    <label for="emiType" id="emiTypeLabel">Interest Calculation Type:</label>
+                    <select id="emiType">
+                      <option value="reducing">Reducing Balance Loan (Standard)</option>
+                      <option value="flat">Flat Rate Loan (More Expensive)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="calc-results">
+                  <div class="result-box highlighted">
+                    <span id="emiMonthlyText">Monthly EMI</span>
+                    <strong id="valEmiMonthly">₹3,227</strong>
+                  </div>
+                  <div class="result-box">
+                    <span id="emiInterestText">Total Interest Payable</span>
+                    <strong id="valEmiInterest">₹16,162</strong>
+                  </div>
+                  <div class="result-box">
+                    <span id="emiTotalText">Total Loan Cost</span>
+                    <strong id="valEmiTotal">₹116,162</strong>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Settings Modal (IBM Watsonx Configuration Panel) -->
+  <div class="modal-backdrop" id="settingsModal">
+    <div class="glass-card modal-panel">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-cloud-bolt"></i> IBM Watsonx.ai Integration</h3>
+        <button class="close-btn" id="closeSettingsBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="settings-intro">
+          To run live text inference using IBM Granite models on <strong>watsonx.ai</strong>, fill in your credentials below. Leave these empty to use our interactive offline <strong>Granite RAG Simulation Mode</strong>.
+        </p>
+        
+        <form id="settingsForm">
+          <div class="form-group">
+            <label for="apiKey">IBM Cloud API Key:</label>
+            <div class="password-input-wrapper">
+              <input type="password" id="apiKey" placeholder="Enter Wastonx / IBM Cloud API key...">
+              <button type="button" class="toggle-password" id="togglePasswordBtn" title="Show / Hide API key">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <p class="input-help">Generated in your IBM Cloud Identity and Access Management (IAM) console.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="projectId">watsonx.ai Project ID:</label>
+            <input type="text" id="projectId" placeholder="Enter Project ID (e.g. 1a2b3c4d-...)">
+            <p class="input-help">Found under the Project -> Manage tab inside watsonx.ai console.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceUrl">Service URL Region:</label>
+            <select id="serviceUrl">
+              <option value="https://us-south.ml.cloud.ibm.com">Dallas, US South (https://us-south.ml.cloud.ibm.com)</option>
+              <option value="https://eu-de.ml.cloud.ibm.com">Frankfurt, Germany (https://eu-de.ml.cloud.ibm.com)</option>
+              <option value="https://us-east.ml.cloud.ibm.com">Washington DC, US East (https://us-east.ml.cloud.ibm.com)</option>
+              <option value="https://jp-tok.ml.cloud.ibm.com">Tokyo, Japan (https://jp-tok.ml.cloud.ibm.com)</option>
+            </select>
+            <p class="input-help">Endpoint region hosting your watsonx.ai deployment instance.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="modelId">Granite Model ID:</label>
+            <select id="modelId">
+              <option value="ibm/granite-3-8b-instruct">ibm/granite-3-8b-instruct (Recommended - General)</option>
+              <option value="ibm/granite-3-2b-instruct">ibm/granite-3-2b-instruct (Compact / Fast)</option>
+              <option value="ibm/granite-13b-instruct-v2">ibm/granite-13b-instruct-v2 (Large - Finance)</option>
+            </select>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" id="clearSettingsBtn">Clear Credentials</button>
+            <button type="submit" class="btn-primary" id="saveSettingsBtn">Save & Connect</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
