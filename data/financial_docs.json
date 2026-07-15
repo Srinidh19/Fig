@@ -334,5 +334,45 @@
     "title": "RBI Guidelines on Digital Lending",
     "keywords": ["digital lending", "loan app", "rbi", "guidelines", "recovery", "data privacy"],
     "content": "To protect borrowers from illegal loan apps, RBI mandated that all loan disbursals and repayments must be executed directly between the borrower's bank account and the Regulated Entity (RE), without passing through the account of a third-party lending service provider (LSP). Digital lending apps cannot access mobile phone resources like contacts, photos, or media. Borrowers must be provided with a Key Fact Statement (KFS) detailing the all-inclusive annual percentage rate (APR) before signing the contract."
+  },
+  {
+    "id": "en_cbdc_digital_rupee",
+    "category": "banking",
+    "language": "en",
+    "title": "Central Bank Digital Currency (CBDC) / e-Rupee",
+    "keywords": ["cbdc", "digital rupee", "e₹", "rbi", "crypto", "fiat", "digital currency"],
+    "content": "The Digital Rupee (e₹) is a Central Bank Digital Currency (CBDC) issued by the RBI. It is the digital form of India's fiat currency and holds the exact same value as physical cash. Unlike cryptocurrencies, it is sovereign-backed and entirely risk-free. Users can transact e₹ through digital wallets offered by participating banks using QR codes. It is highly secure, instant, and aims to reduce the cost of cash management while fostering financial inclusion."
+  },
+  {
+    "id": "en_sgb_gold_bonds",
+    "category": "investments",
+    "language": "en",
+    "title": "Sovereign Gold Bonds (SGBs)",
+    "keywords": ["sgb", "gold bond", "investment", "physical gold", "rbi", "interest", "tax free"],
+    "content": "Sovereign Gold Bonds (SGBs) are government securities denominated in grams of gold, issued by the RBI on behalf of the Government of India. They offer a safer alternative to holding physical gold, as there is no risk of theft or making charges. Investors receive a fixed interest rate (typically 2.5% per annum) on the initial investment, along with capital appreciation linked to gold prices. If held until maturity (8 years), the capital gains are fully tax-exempt."
+  },
+  {
+    "id": "en_account_aggregator",
+    "category": "banking",
+    "language": "en",
+    "title": "Account Aggregator (AA) Framework",
+    "keywords": ["account aggregator", "aa", "data sharing", "consent", "rbi", "loan approval", "financial data"],
+    "content": "An Account Aggregator (AA) is an RBI-regulated entity that helps individuals securely and digitally share their financial data from one institution (like a bank) to another (like a lender) in real-time. It operates purely on user consent. AAs cannot see, store, or sell your data; they merely encrypt and transport it. This framework dramatically speeds up loan approvals, wealth management services, and personal finance tracking by eliminating physical paperwork."
+  },
+  {
+    "id": "en_repo_rate",
+    "category": "economy",
+    "language": "en",
+    "title": "Repo Rate and its Impact on EMIs",
+    "keywords": ["repo rate", "rbi", "emi", "interest rate", "inflation", "home loan", "borrowing"],
+    "content": "The Repo Rate is the interest rate at which the RBI lends money to commercial banks. When inflation is high, the RBI increases the repo rate to restrict money supply, making borrowing more expensive for banks. Banks pass this cost to consumers by increasing interest rates on loans. Therefore, a hike in the repo rate usually leads to higher EMIs on home, car, and personal loans, while a cut in the repo rate typically makes loans cheaper."
+  },
+  {
+    "id": "en_nps_retirement",
+    "category": "investments",
+    "language": "en",
+    "title": "National Pension System (NPS)",
+    "keywords": ["nps", "pension", "retirement", "tax benefit", "80c", "80ccd", "pfrda"],
+    "content": "The National Pension System (NPS) is a voluntary retirement savings scheme regulated by PFRDA. It allows individuals to systematically invest during their working years to build a retirement corpus. Upon turning 60, up to 60% of the corpus can be withdrawn tax-free, while the remaining 40% must be used to purchase an annuity for a regular monthly pension. NPS offers an exclusive additional tax deduction of Rs. 50,000 under Section 80CCD(1B), over and above the Rs. 1.5 Lakh limit under Section 80C."
   }
 ]
