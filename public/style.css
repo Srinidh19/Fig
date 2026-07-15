@@ -14,9 +14,9 @@
   --color-text-secondary: #4b5563;
   --color-text-muted: #6b7280;
   
-  --primary: #10a37f;
-  --primary-hover: #059669;
-  --primary-glow: transparent;
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-glow: rgba(124, 58, 237, 0.2);
   
   --accent-blue: #2563eb;
   --accent-orange: #d97706;
@@ -1368,6 +1368,7 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .app-window {
