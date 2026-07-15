@@ -497,6 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function transitionToChatState() {
     if (dom.welcomeHeader) dom.welcomeHeader.classList.add('hidden');
     if (dom.chatInputWrapper) dom.chatInputWrapper.classList.remove('expansive');
+    if (dom.chatMessages) dom.chatMessages.classList.remove('hidden');
   }
 
   // Handle Enter key for textarea
@@ -537,7 +538,8 @@ function setupFileAttachments() {
         if (typeof transitionToChatState === 'function') transitionToChatState();
         else if (dom.welcomeHeader) {
           dom.welcomeHeader.classList.add('hidden');
-          dom.chatInputWrapper.classList.remove('expansive');
+          if (dom.chatInputWrapper) dom.chatInputWrapper.classList.remove('expansive');
+          if (dom.chatMessages) dom.chatMessages.classList.remove('hidden');
         }
         
         const file = e.target.files[0];

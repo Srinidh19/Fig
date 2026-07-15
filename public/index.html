@@ -102,8 +102,7 @@
         <!-- ============================================== -->
         <div id="view-chat" class="view-panel active">
           
-          <div class="chat-messages" id="chatMessages">
-            <!-- Messages injected by JS -->
+          <div class="chat-messages hidden" id="chatMessages">
           </div>
 
           <!-- Welcome Screen (Visible only when no messages) -->
@@ -122,7 +121,7 @@
             <form class="chat-input-area" id="chatForm">
               <div class="textarea-container">
                 <i class="fa-solid fa-wand-magic-sparkles input-icon-left"></i>
-                <textarea id="chatInput" placeholder="Initiate a query or send a command to the AI..." required></textarea>
+                <textarea id="chatInput" placeholder="Type here..." required></textarea>
               </div>
               <div class="input-toolbar">
                 <div class="input-actions-left">
