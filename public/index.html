@@ -46,16 +46,16 @@
         
         <div style="margin-top: 2rem;">
           <p class="menu-label">Beginner Docs</p>
-          <button class="nav-btn" onclick="document.getElementById('chatInput').value='Explain what a PAN Card is and why it is necessary.'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+          <button class="nav-btn" data-view="chat" onclick="document.getElementById('chatInput').value='Explain what a PAN Card is and why it is necessary.'; document.getElementById('chatForm').dispatchEvent(new Event('submit', {cancelable: true}));">
             <i class="fa-solid fa-id-card"></i> PAN Card Guide
           </button>
-          <button class="nav-btn" onclick="document.getElementById('chatInput').value='Explain what Aadhaar is and its benefits.'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+          <button class="nav-btn" data-view="chat" onclick="document.getElementById('chatInput').value='Explain what Aadhaar is and its benefits.'; document.getElementById('chatForm').dispatchEvent(new Event('submit', {cancelable: true}));">
             <i class="fa-solid fa-fingerprint"></i> Aadhaar Basics
           </button>
-          <button class="nav-btn" onclick="document.getElementById('chatInput').value='How to file an Income Tax Return (ITR)?'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+          <button class="nav-btn" data-view="chat" onclick="document.getElementById('chatInput').value='How to file an Income Tax Return (ITR)?'; document.getElementById('chatForm').dispatchEvent(new Event('submit', {cancelable: true}));">
             <i class="fa-solid fa-file-invoice-dollar"></i> ITR Filing
           </button>
-          <button class="nav-btn" onclick="document.getElementById('chatInput').value='What is the National Pension System (NPS)?'; document.getElementById('chatForm').dispatchEvent(new Event('submit'));">
+          <button class="nav-btn" data-view="chat" onclick="document.getElementById('chatInput').value='What is the National Pension System (NPS)?'; document.getElementById('chatForm').dispatchEvent(new Event('submit', {cancelable: true}));">
             <i class="fa-solid fa-piggy-bank"></i> NPS Retirement
           </button>
         </div>
