@@ -1182,7 +1182,7 @@ function loadChatHistoryList() {
     btn.className = 'nav-btn';
     btn.style.fontSize = '0.85rem';
     btn.style.padding = '0.5rem 1rem';
-    btn.innerHTML = <i class="fa-regular fa-message"></i> ;
+    btn.innerHTML = `<i class="fa-regular fa-message"></i> ${session.title}`;
     btn.onclick = () => {
       currentSessionId = session.id;
       dom.chatMessages.innerHTML = session.html;
