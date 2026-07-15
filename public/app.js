@@ -6,7 +6,7 @@ const translations = {
     headerSubtitle: "AI Financial Literacy Agent",
     chatTitle: "FiniShield Assistant",
     chatSubtitle: "Powered by RAG & IBM Granite",
-    chatPlaceholder: "Ask about UPI, Scams, Budgeting or Interest Rates...",
+    chatPlaceholder: "Type here...",
     btnSend: "Send",
     visualizerTitle: "Retrieval-Augmented Generation (RAG) Workflow",
     step1Label: "Query Prep",
@@ -57,7 +57,7 @@ const translations = {
     headerSubtitle: "एआई वित्तीय साक्षरता सहायक",
     chatTitle: "फिनिशील्ड सहायक",
     chatSubtitle: "RAG और आईबीएम ग्रेनाइट द्वारा संचालित",
-    chatPlaceholder: "यूपीआई, घोटालों, बजट या ब्याज दरों के बारे में पूछें...",
+    chatPlaceholder: "Type here...",
     btnSend: "भेजें",
     visualizerTitle: "रिट्रीवल-ऑगमेंटेड जनरेशन (RAG) कार्यप्रवाह",
     step1Label: "प्रश्न तैयारी",
@@ -108,7 +108,7 @@ const translations = {
     headerSubtitle: "एआय आर्थिक साक्षरता सहाय्यक",
     chatTitle: "फिनिशील्ड सहाय्यक",
     chatSubtitle: "RAG आणि आयबीएम ग्रेनाइटद्वारे संचालित",
-    chatPlaceholder: "यूपीआय, फसवणूक, बजेट किंवा व्याजदरांबद्दल विचारा...",
+    chatPlaceholder: "Type here...",
     btnSend: "पाठवा",
     visualizerTitle: "रिट्रीव्हल-ऑगमेंटेड जनरेशन (RAG) कार्यप्रवाह",
     step1Label: "प्रश्न तयारी",
@@ -159,7 +159,7 @@ const translations = {
     headerSubtitle: "AI நிதி அறிவு உதவியாளர்",
     chatTitle: "பினிஷீல்டு உதவியாளர்",
     chatSubtitle: "RAG & IBM கிரானைட் மூலம் இயங்குகிறது",
-    chatPlaceholder: "UPI, மோசடி, பட்ஜெட் அல்லது வட்டி பற்றி கேட்க...",
+    chatPlaceholder: "Type here...",
     btnSend: "அனுப்பு",
     visualizerTitle: "RAG தகவல் மீட்பு மற்றும் உருவாக்க கட்டமைப்பு",
     step1Label: "கேள்வி தயார்",
@@ -511,10 +511,30 @@ function setupFileAttachments() {
   if (dom.attachBtnClip) dom.attachBtnClip.addEventListener('click', triggerFileInput);
   
   if (dom.chatFileInput) {
-    dom.chatFileInput.addEventListener('change', (e) => {
+    dom.chatFileInput.addEventListener('change', async (e) => {
       if (e.target.files.length > 0) {
         const file = e.target.files[0];
-        injectBotMessage(`📄 **File Uploaded:** ${file.name}<br><br><i>I have securely scanned this document and loaded it into my active RAG context. Feel free to ask me questions about its contents!</i>`);
+        injectBotMessage(`Scanning document: ${file.name}...`);
+        
+        const formData = new FormData();
+        formData.append('document', file);
+        
+        try {
+          const res = await fetch('/api/upload', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const data = await res.json();
+          if (res.ok) {
+            injectBotMessage(`📄 **File Parsed Successfully:** ${file.name}<br><br><i>I have securely scanned this document and loaded its text into my active knowledge base. Feel free to ask me questions about its contents!</i>`);
+          } else {
+            injectBotMessage(`❌ **Upload Failed:** ${data.error || 'Unknown error occurred.'}`);
+          }
+        } catch (error) {
+          injectBotMessage(`❌ **Upload Error:** Could not connect to the backend server to parse this file.`);
+        }
+        
         e.target.value = ''; // Reset input
       }
     });

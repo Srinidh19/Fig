@@ -2,6 +2,11 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const dotenv = require('dotenv');
+const multer = require('multer');
+const pdf = require('pdf-parse');
+
+// Configure multer for memory storage
+const upload = multer({ storage: multer.memoryStorage() });
 
 // Load environment variables if any
 dotenv.config();
@@ -122,6 +127,47 @@ async function getIBMIAMToken(apiKey) {
 // Expose static config test route
 app.get('/api/health', (req, res) => {
   res.json({ status: 'healthy', docsCount: documents.length });
+});
+
+// Endpoint: File Upload
+app.post('/api/upload', upload.single('document'), async (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ error: 'No file uploaded' });
+  }
+
+  try {
+    let extractedText = '';
+    const originalName = req.file.originalname;
+
+    if (originalName.toLowerCase().endsWith('.pdf')) {
+      const pdfData = await pdf(req.file.buffer);
+      extractedText = pdfData.text;
+    } else if (originalName.toLowerCase().endsWith('.txt')) {
+      extractedText = req.file.buffer.toString('utf8');
+    } else {
+      return res.status(400).json({ error: 'Unsupported file type. Only PDF and TXT are supported.' });
+    }
+
+    if (!extractedText || extractedText.trim() === '') {
+      return res.status(400).json({ error: 'Could not extract text from the file.' });
+    }
+
+    // Add to our RAG documents array
+    const newDocId = 'user_upload_' + Date.now();
+    documents.push({
+      id: newDocId,
+      language: 'en', // assume english for custom uploads or handle dynamically
+      title: originalName,
+      keywords: originalName.split(/[_\s.-]+/),
+      content: extractedText.substring(0, 5000) // limit size to prevent context overflow
+    });
+
+    console.log(`Uploaded document added to knowledge base: ${originalName}`);
+    return res.json({ success: true, filename: originalName, message: 'File successfully parsed and added to RAG context.' });
+  } catch (error) {
+    console.error('File parsing error:', error);
+    return res.status(500).json({ error: 'Failed to process file' });
+  }
 });
 
 // Endpoint: Chat Query with dynamic RAG pipeline
