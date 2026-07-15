@@ -505,7 +505,8 @@ document.addEventListener("DOMContentLoaded", () => {
     dom.chatInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
-        dom.chatForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+        transitionToChatState();
+        handleUserChatSubmit(e);
       }
     });
   }
