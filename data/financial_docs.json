@@ -390,5 +390,29 @@
     "title": "Stock Market Basics for Beginners",
     "keywords": ["stocks", "share market", "investing", "nifty", "sensex", "equity", "dividends"],
     "content": "Investing in the stock market means buying partial ownership (shares) in publicly traded companies. As the company's profits grow, the value of your shares increases (capital appreciation), and they may also pay you a portion of profits as 'dividends'. For beginners, it's safer to invest in Index Funds or ETFs (like Nifty 50) rather than picking individual stocks, as this provides instant diversification. Always invest for the long term (5+ years) to ride out market volatility, and never invest money you might need urgently."
+  },
+  {
+    "id": "en_pan_card",
+    "category": "documents",
+    "language": "en",
+    "title": "PAN Card Guide",
+    "keywords": ["pan card", "permanent account number", "taxes", "kyc", "bank account", "identity proof"],
+    "content": "A PAN (Permanent Account Number) Card is a 10-digit alphanumeric identifier issued by the Income Tax Department. It is absolutely essential for tracking financial transactions and paying taxes in India. You must provide your PAN for opening a bank account, investing in mutual funds or stocks, buying property, and for any cash transaction exceeding Rs. 50,000. It serves as a universally accepted proof of identity, but not proof of address."
+  },
+  {
+    "id": "en_aadhaar_card",
+    "category": "documents",
+    "language": "en",
+    "title": "Aadhaar Basics",
+    "keywords": ["aadhaar", "uidai", "kyc", "identity proof", "biometric", "address proof", "subsidies"],
+    "content": "Aadhaar is a 12-digit unique identification number issued by UIDAI to residents of India, linked to their biometric and demographic data. It is the most robust proof of identity and address in the country. Aadhaar is heavily used for e-KYC (Know Your Customer) across banks and telecom operators, and is mandatory for receiving government subsidies, filing Income Tax Returns (where PAN-Aadhaar linking is required), and opening most digital accounts."
+  },
+  {
+    "id": "en_itr_filing",
+    "category": "taxes",
+    "language": "en",
+    "title": "Income Tax Return (ITR) Filing",
+    "keywords": ["itr", "income tax", "filing", "taxes", "refund", "tds", "financial year"],
+    "content": "An Income Tax Return (ITR) is a form submitted to the Income Tax Department declaring your annual income, deductions, and taxes paid. Filing an ITR is legally mandatory if your income exceeds the basic exemption limit. Even if your income is below the limit, filing a nil return is highly beneficial—it acts as a verified proof of income, which is crucial for getting loans approved quickly, claiming TDS refunds, and applying for foreign visas."
   }
 ]

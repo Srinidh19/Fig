@@ -677,11 +677,8 @@ function injectBotMessage(htmlContent) {
   `;
   dom.chatMessages.appendChild(msgDiv);
   
-  if (msgDiv.offsetHeight > dom.chatMessages.clientHeight * 0.7) {
-    msgDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } else {
-    dom.chatMessages.scrollTop = dom.chatMessages.scrollHeight;
-  }
+  // Always scroll to the absolute bottom so the input box never gets pushed off screen
+  dom.chatMessages.scrollTop = dom.chatMessages.scrollHeight;
 }
 
 function injectUserMessage(text) {
