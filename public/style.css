@@ -115,7 +115,8 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), #a855f7);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,10 +142,18 @@ body {
   letter-spacing: -0.5px;
 }
 .brand-text h1.gradient-logo {
-  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  background: linear-gradient(270deg, #6366f1, #a855f7, #ec4899, #6366f1);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: flow-gradient 5s ease infinite;
   text-shadow: 0 2px 10px rgba(99, 102, 241, 0.2);
+}
+
+@keyframes flow-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .brand-text span {
   color: var(--primary);
@@ -1702,7 +1711,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.5rem;
   width: 100%;
 }
@@ -1711,7 +1720,16 @@ body {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+  flex: 1;
+}
+
+.input-actions-left::-webkit-scrollbar {
+  display: none;
 }
 
 .input-actions-right {
