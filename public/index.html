@@ -106,26 +106,41 @@
             <!-- Messages injected by JS -->
           </div>
 
+          <!-- Welcome Screen (Visible only when no messages) -->
+          <div class="welcome-header" id="welcomeHeader">
+            <div class="glowing-orb"></div>
+            <h2 id="welcomeGreeting">Good Morning,</h2>
+            <h3 id="welcomeQuestion">How Can I Assist You Today?</h3>
+          </div>
+
           <!-- Chat Input Floating Bar -->
-          <div class="chat-input-wrapper">
+          <div class="chat-input-wrapper expansive" id="chatInputWrapper">
             <div class="prompt-suggestions" id="suggestionBox">
               <!-- Suggetions injected by JS -->
             </div>
             
             <form class="chat-input-area" id="chatForm">
-              <i class="fa-solid fa-wand-magic-sparkles input-icon-left"></i>
-              <input type="text" id="chatInput" placeholder="Type your request GraniteGuard will handle the rest" autocomplete="off" required>
-              <div class="input-actions">
-                <input type="file" id="chatFileInput" style="display: none;" accept=".pdf,.doc,.docx,.txt">
-                <button type="button" class="tool-icon-btn" id="attachBtnPlus" title="Add Document"><i class="fa-solid fa-plus"></i></button>
-                <button type="button" class="tool-icon-btn" id="attachBtnClip" title="Attach File"><i class="fa-solid fa-paperclip"></i></button>
+              <div class="textarea-container">
+                <i class="fa-solid fa-wand-magic-sparkles input-icon-left"></i>
+                <textarea id="chatInput" placeholder="Initiate a query or send a command to the AI..." required></textarea>
               </div>
-              <button type="button" class="voice-btn" id="voiceInputBtn" title="Voice Input">
-                <i class="fa-solid fa-microphone"></i>
-              </button>
-              <button type="submit" class="send-btn" id="sendMsgBtn">
-                <i class="fa-solid fa-paper-plane"></i>
-              </button>
+              <div class="input-toolbar">
+                <div class="input-actions-left">
+                  <input type="file" id="chatFileInput" style="display: none;" accept=".pdf,.doc,.docx,.txt">
+                  <button type="button" class="tool-icon-btn" id="attachBtnClip" title="Attach File"><i class="fa-solid fa-paperclip"></i></button>
+                  <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Analyze this financial document';"><i class="fa-solid fa-file-pdf"></i> Analyze Doc</button>
+                  <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Help me spot a scam message';"><i class="fa-solid fa-shield-halved"></i> Spot Scam</button>
+                  <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Calculate my EMI interest';"><i class="fa-solid fa-calculator"></i> Finance Tools</button>
+                </div>
+                <div class="input-actions-right">
+                  <button type="button" class="voice-btn" id="voiceInputBtn" title="Voice Input">
+                    <i class="fa-solid fa-microphone"></i>
+                  </button>
+                  <button type="submit" class="send-btn" id="sendMsgBtn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
           

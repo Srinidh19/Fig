@@ -427,6 +427,8 @@ const dom = {
   chatMessages: document.getElementById('chatMessages'),
   chatForm: document.getElementById('chatForm'),
   chatInput: document.getElementById('chatInput'),
+  welcomeHeader: document.getElementById('welcomeHeader'),
+  chatInputWrapper: document.getElementById('chatInputWrapper'),
   voiceInputBtn: document.getElementById('voiceInputBtn'),
   clearChatBtn: document.getElementById('clearChatBtn'),
   suggestionBox: document.getElementById('suggestionBox'),
@@ -491,7 +493,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Chat submit binding
-  dom.chatForm.addEventListener('submit', handleUserChatSubmit);
+  
+  function transitionToChatState() {
+    if (dom.welcomeHeader) dom.welcomeHeader.classList.add('hidden');
+    if (dom.chatInputWrapper) dom.chatInputWrapper.classList.remove('expansive');
+  }
+
+  // Handle Enter key for textarea
+  if (dom.chatInput) {
+    dom.chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        dom.chatForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+      }
+    });
+  }
+
+  dom.chatForm.addEventListener('submit', (e) => {
+    transitionToChatState();
+    handleUserChatSubmit(e);
+  });
   dom.clearChatBtn.addEventListener('click', clearChatLogs);
   
   // File attachment binding
@@ -513,6 +534,12 @@ function setupFileAttachments() {
   if (dom.chatFileInput) {
     dom.chatFileInput.addEventListener('change', async (e) => {
       if (e.target.files.length > 0) {
+        if (typeof transitionToChatState === 'function') transitionToChatState();
+        else if (dom.welcomeHeader) {
+          dom.welcomeHeader.classList.add('hidden');
+          dom.chatInputWrapper.classList.remove('expansive');
+        }
+        
         const file = e.target.files[0];
         injectBotMessage(`Scanning document: ${file.name}...`);
         
