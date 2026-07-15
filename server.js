@@ -329,6 +329,11 @@ What financial topic would you like to explore today?`,
   }
 });
 
+// Explicitly serve index.html for the root route (and any other unmatched routes for SPA)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Start the Server
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
