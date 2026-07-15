@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -97,11 +98,24 @@
             <i class="fa-solid fa-gear"></i>
           </button>
           
-          <button class="export-btn" id="googleSignInBtn" style="background: var(--primary); color: white; border: none;">
-            <i class="fa-brands fa-google"></i> Sign In
-          </button>
+          <div id="g_id_onload"
+               data-client_id="YOUR_GOOGLE_CLIENT_ID_HERE.apps.googleusercontent.com"
+               data-context="signin"
+               data-ux_mode="popup"
+               data-callback="handleCredentialResponse"
+               data-auto_prompt="false">
+          </div>
+
+          <div class="g_id_signin"
+               data-type="standard"
+               data-shape="rectangular"
+               data-theme="outline"
+               data-text="signin_with"
+               data-size="medium"
+               data-logo_alignment="left">
+          </div>
           
-          <button class="export-btn">
+          <button class="export-btn" style="margin-left: 0.5rem;">
              Export <i class="fa-solid fa-arrow-up-from-bracket"></i>
           </button>
         </div>

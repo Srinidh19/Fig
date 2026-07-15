@@ -1239,24 +1239,19 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(dom.chatMessages, { childList: true, subtree: true, characterData: true });
   }
 });
-const googleSignInBtn = document.getElementById('googleSignInBtn');
-if (googleSignInBtn) {
-  googleSignInBtn.onclick = () => {
-    googleSignInBtn.innerHTML = '<i class="fa-solid fa-user"></i> User';
-    googleSignInBtn.style.background = '#e2e8f0';
-    googleSignInBtn.style.color = '#1e293b';
-    const toast = document.createElement('div');
-    toast.className = 'toast-message success';
-    toast.style.position = 'fixed';
-    toast.style.bottom = '20px';
-    toast.style.right = '20px';
-    toast.style.padding = '1rem';
-    toast.style.background = 'var(--success)';
-    toast.style.color = 'white';
-    toast.style.borderRadius = '8px';
-    toast.style.zIndex = '9999';
-    toast.innerHTML = 'Successfully signed in! Chats are now syncing to your Google account.';
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 3000);
-  };
+function handleCredentialResponse(response) {
+  // Decode JWT and show welcome toast
+  const toast = document.createElement('div');
+  toast.className = 'toast-message success';
+  toast.style.position = 'fixed';
+  toast.style.bottom = '20px';
+  toast.style.right = '20px';
+  toast.style.padding = '1rem';
+  toast.style.background = 'var(--success)';
+  toast.style.color = 'white';
+  toast.style.borderRadius = '8px';
+  toast.style.zIndex = '9999';
+  toast.innerHTML = 'Successfully authenticated with Google! Chats are now syncing to your account.';
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 4000);
 }
