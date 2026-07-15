@@ -422,17 +422,7 @@ let voiceRecognitionInstance = null;
 const dom = {
   activeLangBtn: document.getElementById('activeLangBtn'),
   langOptions: document.getElementById('langOptions'),
-  connectionStatus: document.getElementById('connectionStatus'),
-  openSettingsBtn: document.getElementById('openSettingsBtn'),
-  closeSettingsBtn: document.getElementById('closeSettingsBtn'),
-  settingsModal: document.getElementById('settingsModal'),
-  settingsForm: document.getElementById('settingsForm'),
-  apiKey: document.getElementById('apiKey'),
-  projectId: document.getElementById('projectId'),
-  serviceUrl: document.getElementById('serviceUrl'),
-  modelId: document.getElementById('modelId'),
-  togglePasswordBtn: document.getElementById('togglePasswordBtn'),
-  clearSettingsBtn: document.getElementById('clearSettingsBtn'),
+  // settings modal elements removed
   
   chatMessages: document.getElementById('chatMessages'),
   chatForm: document.getElementById('chatForm'),
@@ -486,7 +476,6 @@ const dom = {
 // Initialization & Startup Handlers
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
-  setupCredentialStore();
   setupLanguageSelection();
   setupTabSelectors();
   setupSpeechRecognition();
@@ -546,49 +535,7 @@ function setupCredentialStore() {
     setConnectionStatusBadge(false);
   }
 
-  // Modal event bindings
-  dom.openSettingsBtn.addEventListener('click', () => dom.settingsModal.classList.add('show'));
-  const sidebarBtn = document.getElementById('openSettingsBtnSidebar');
-  if (sidebarBtn) sidebarBtn.addEventListener('click', () => dom.settingsModal.classList.add('show'));
-  dom.closeSettingsBtn.addEventListener('click', () => dom.settingsModal.classList.remove('show'));
-  
-  // Toggle password visibility
-  dom.togglePasswordBtn.addEventListener('click', () => {
-    const isPassword = dom.apiKey.type === 'password';
-    dom.apiKey.type = isPassword ? 'text' : 'password';
-    dom.togglePasswordBtn.querySelector('i').className = isPassword ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
-  });
-
-  // Save Settings Submit
-  dom.settingsForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const apikey = dom.apiKey.value.trim();
-    const projectId = dom.projectId.value.trim();
-    const serviceUrl = dom.serviceUrl.value;
-    const modelId = dom.modelId.value;
-
-    if (apikey && projectId) {
-      const creds = { apikey, projectId, serviceUrl, modelId };
-      localStorage.setItem('watsonx_creds', JSON.stringify(creds));
-      setConnectionStatusBadge(true);
-      alert("Success: Credentials Saved! App is now running in Live IBM Granite API mode.");
-    } else {
-      alert("Error: Please fill in both the API Key and Project ID to connect to watsonx.ai.");
-    }
-    dom.settingsModal.classList.remove('show');
-  });
-
-  // Clear Credentials
-  dom.clearSettingsBtn.addEventListener('click', () => {
-    localStorage.removeItem('watsonx_creds');
-    dom.apiKey.value = '';
-    dom.projectId.value = '';
-    dom.serviceUrl.value = 'https://us-south.ml.cloud.ibm.com';
-    dom.modelId.value = 'ibm/granite-3-8b-instruct';
-    setConnectionStatusBadge(false);
-    alert("API Credentials Cleared. Switched back to local Granite RAG Simulation Mode.");
-    dom.settingsModal.classList.remove('show');
-  });
+  // Settings Modal Removed
 }
 
 function getSavedCredentials() {
@@ -596,18 +543,7 @@ function getSavedCredentials() {
   return raw ? JSON.parse(raw) : null;
 }
 
-function setConnectionStatusBadge(live) {
-  const sidebarBtn = document.getElementById('openSettingsBtnSidebar');
-  if (live) {
-    dom.connectionStatus.className = "upgrade-card status-live";
-    dom.connectionStatus.querySelector('.status-text').textContent = "Live Granite API";
-    if (sidebarBtn) sidebarBtn.textContent = "API Settings";
-  } else {
-    dom.connectionStatus.className = "upgrade-card status-simulated";
-    dom.connectionStatus.querySelector('.status-text').textContent = "Simulated Granite Mode";
-    if (sidebarBtn) sidebarBtn.textContent = "Connect Live API";
-  }
-}
+// Badge Logic Removed
 
 // ==========================================================================
 // Language Switching System

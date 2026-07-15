@@ -339,65 +339,6 @@
     </main>
   </div>
 
-  <!-- Settings Modal (IBM Watsonx Configuration Panel) -->
-  <div class="modal-backdrop" id="settingsModal">
-    <div class="glass-card modal-panel">
-      <div class="modal-header">
-        <h3><i class="fa-solid fa-cloud-bolt"></i> IBM Watsonx.ai Integration</h3>
-        <button class="close-btn" id="closeSettingsBtn">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p class="settings-intro">
-          To run live text inference using IBM Granite models on <strong>watsonx.ai</strong>, fill in your credentials below. Leave these empty to use our interactive offline <strong>Granite RAG Simulation Mode</strong>.
-        </p>
-        
-        <form id="settingsForm">
-          <div class="form-group">
-            <label for="apiKey">IBM Cloud API Key:</label>
-            <div class="password-input-wrapper">
-              <input type="password" id="apiKey" placeholder="Enter Wastonx / IBM Cloud API key...">
-              <button type="button" class="toggle-password" id="togglePasswordBtn" title="Show / Hide API key">
-                <i class="fa-solid fa-eye"></i>
-              </button>
-            </div>
-            <p class="input-help">Generated in your IBM Cloud Identity and Access Management (IAM) console.</p>
-          </div>
-
-          <div class="form-group">
-            <label for="projectId">watsonx.ai Project ID:</label>
-            <input type="text" id="projectId" placeholder="Enter Project ID (e.g. 1a2b3c4d-...)">
-            <p class="input-help">Found under the Project -> Manage tab inside watsonx.ai console.</p>
-          </div>
-
-          <div class="form-group">
-            <label for="serviceUrl">Service URL Region:</label>
-            <select id="serviceUrl">
-              <option value="https://us-south.ml.cloud.ibm.com">Dallas, US South (https://us-south.ml.cloud.ibm.com)</option>
-              <option value="https://eu-de.ml.cloud.ibm.com">Frankfurt, Germany (https://eu-de.ml.cloud.ibm.com)</option>
-              <option value="https://us-east.ml.cloud.ibm.com">Washington DC, US East (https://us-east.ml.cloud.ibm.com)</option>
-              <option value="https://jp-tok.ml.cloud.ibm.com">Tokyo, Japan (https://jp-tok.ml.cloud.ibm.com)</option>
-            </select>
-            <p class="input-help">Endpoint region hosting your watsonx.ai deployment instance.</p>
-          </div>
-
-          <div class="form-group">
-            <label for="modelId">Granite Model ID:</label>
-            <select id="modelId">
-              <option value="ibm/granite-3-8b-instruct">ibm/granite-3-8b-instruct (Recommended - General)</option>
-              <option value="ibm/granite-3-2b-instruct">ibm/granite-3-2b-instruct (Compact / Fast)</option>
-              <option value="ibm/granite-13b-instruct-v2">ibm/granite-13b-instruct-v2 (Large - Finance)</option>
-            </select>
-          </div>
-
-          <div class="modal-actions">
-            <button type="button" class="btn-secondary" id="clearSettingsBtn">Clear Credentials</button>
-            <button type="submit" class="btn-primary" id="saveSettingsBtn">Save & Connect</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
+  <!-- Settings Modal Removed -->  <script src="app.js"></script>
 </body>
 </html>
