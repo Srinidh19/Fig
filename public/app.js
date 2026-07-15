@@ -1160,3 +1160,81 @@ document.querySelectorAll('.sidebar .nav-btn').forEach(btn => {
   });
 });
 
+// Chat History Logic
+const sidebarChatHistory = document.getElementById('sidebarChatHistory');
+const newChatBtn = document.getElementById('newChatBtn');
+
+let currentSessionId = Date.now().toString();
+
+function loadChatHistoryList() {
+  if (!sidebarChatHistory) return;
+  let sessions = JSON.parse(localStorage.getItem('graniteGuardSessions') || '[]');
+  if (sessions.length === 0) {
+    sidebarChatHistory.innerHTML = '<p style="font-size: 0.8rem; color: #9ca3af; padding: 0 1rem;">No recent chats</p>';
+    return;
+  }
+  
+  sidebarChatHistory.innerHTML = '';
+  // Sort descending by id (timestamp)
+  sessions.sort((a, b) => Number(b.id) - Number(a.id)).forEach(session => {
+    const btn = document.createElement('button');
+    btn.className = 'nav-btn';
+    btn.style.fontSize = '0.85rem';
+    btn.style.padding = '0.5rem 1rem';
+    btn.innerHTML = <i class="fa-regular fa-message"></i> ;
+    btn.onclick = () => {
+      currentSessionId = session.id;
+      dom.chatMessages.innerHTML = session.html;
+      if (dom.welcomeHeader) dom.welcomeHeader.classList.add('hidden');
+      if (dom.chatInputWrapper) dom.chatInputWrapper.classList.remove('expansive');
+      if (dom.chatMessages) dom.chatMessages.classList.remove('hidden');
+      // Set active view if not already
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-view="chat"]').classList.add('active');
+      document.querySelectorAll('.view-panel').forEach(v => v.classList.remove('active'));
+      document.getElementById('view-chat').classList.add('active');
+    };
+    sidebarChatHistory.appendChild(btn);
+  });
+}
+
+function saveCurrentSession() {
+  if (!dom.chatMessages) return;
+  let sessions = JSON.parse(localStorage.getItem('graniteGuardSessions') || '[]');
+  let html = dom.chatMessages.innerHTML;
+  if (!html.trim()) return;
+  
+  // Create a title based on the first user message
+  const firstUserMsg = dom.chatMessages.querySelector('.message.user .message-bubble');
+  let title = firstUserMsg ? firstUserMsg.innerText.substring(0, 20) + '...' : 'New Chat';
+  
+  let existingIndex = sessions.findIndex(s => s.id === currentSessionId);
+  if (existingIndex > -1) {
+    sessions[existingIndex].html = html;
+    sessions[existingIndex].title = title;
+  } else {
+    sessions.push({ id: currentSessionId, html, title });
+  }
+  
+  localStorage.setItem('graniteGuardSessions', JSON.stringify(sessions));
+  loadChatHistoryList();
+}
+
+if (newChatBtn) {
+  newChatBtn.onclick = () => {
+    currentSessionId = Date.now().toString();
+    dom.chatMessages.innerHTML = '';
+    if (dom.welcomeHeader) dom.welcomeHeader.classList.remove('hidden');
+    if (dom.chatInputWrapper) dom.chatInputWrapper.classList.add('expansive');
+    if (dom.chatMessages) dom.chatMessages.classList.add('hidden');
+    loadChatHistoryList();
+  };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadChatHistoryList();
+  if (dom.chatMessages) {
+    const observer = new MutationObserver(() => saveCurrentSession());
+    observer.observe(dom.chatMessages, { childList: true, subtree: true, characterData: true });
+  }
+});

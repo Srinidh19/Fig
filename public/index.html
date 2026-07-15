@@ -42,6 +42,15 @@
         <button class="nav-btn" data-view="finance-tools">
           <i class="fa-solid fa-calculator"></i> Financial Tools
         </button>
+        <div style="margin-top: 2rem;">
+          <p class="menu-label">Recent Chats</p>
+          <div id="sidebarChatHistory" style="display: flex; flex-direction: column; gap: 0.5rem; overflow-y: auto; max-height: 250px;">
+            <p style="font-size: 0.8rem; color: #9ca3af; padding: 0 1rem;">No recent chats</p>
+          </div>
+          <button class="nav-btn" id="newChatBtn" style="margin-top: 1rem; color: var(--primary);">
+            <i class="fa-solid fa-plus"></i> New Chat
+          </button>
+        </div>
       </div>
 
       <div class="sidebar-footer" style="display: none;">

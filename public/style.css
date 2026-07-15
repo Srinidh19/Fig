@@ -1636,12 +1636,12 @@ body {
 .chat-input-area {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.7);
+  background: #ffffff;
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 0.75rem 1rem;
-  box-shadow: 0 4px 40px rgba(139, 92, 246, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
   width: 100%;
   max-width: 800px;
   transition: all 0.3s ease;
