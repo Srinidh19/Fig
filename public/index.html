@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GraniteGuard - AI Agent for Digital Financial Literacy</title>
+  <title>FinGranite - AI Agent for Digital Financial Literacy</title>
   
   <meta name="description" content="An intelligent, RAG-based AI Agent for Digital Financial Literacy, powered by IBM Granite. Learn UPI safety, avoid online scams, calculate compound interest and budget using the 50/30/20 rule.">
   <meta name="keywords" content="financial literacy, upi safety, avoid scams, compound interest, budget calculator, ibm granite, rag agent, ai, aicte">
@@ -28,7 +28,7 @@
           <i class="fa-solid fa-shield-halved brand-logo"></i>
         </div>
         <div class="brand-text">
-          <h1>Granite<span>Guard</span></h1>
+          <h1>Fin<span>Granite</span></h1>
         </div>
       </div>
       
@@ -75,7 +75,7 @@
       <!-- Top Header -->
       <header class="main-header">
         <div class="header-breadcrumbs">
-          <span>GraniteGuard App</span> / <span id="currentViewName" style="color:var(--color-text-primary);font-weight:600;">AI Chat v1.0</span> <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i>
+          <span>FinGranite App</span> / <span id="currentViewName" style="color:var(--color-text-primary);font-weight:600;">AI Chat v1.0</span> <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i>
         </div>
         
         <div class="header-controls">
@@ -156,7 +156,9 @@
                   <button type="button" class="tool-icon-btn" id="attachBtnClip" title="Attach File"><i class="fa-solid fa-paperclip"></i></button>
                   <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Analyze this financial document';"><i class="fa-solid fa-file-pdf"></i> Analyze Doc</button>
                   <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Help me spot a scam message';"><i class="fa-solid fa-shield-halved"></i> Spot Scam</button>
-                  <button type="button" class="pill-btn" onclick="document.getElementById('chatInput').value='Calculate my EMI interest';"><i class="fa-solid fa-calculator"></i> Finance Tools</button>
+                  <button type="button" class="pill-btn" onclick="window.open('https://emicalculator.net/', '_blank');" title="External Reference"><i class="fa-solid fa-calculator"></i> EMI Calculator</button>
+                  <button type="button" class="pill-btn" onclick="window.open('https://incometaxindia.gov.in/Pages/tools/income-tax-calculator.aspx', '_blank');" title="External Reference"><i class="fa-solid fa-landmark"></i> Tax Planner</button>
+                  <button type="button" class="pill-btn" onclick="window.open('https://www.rbi.org.in/', '_blank');" title="External Reference"><i class="fa-solid fa-book"></i> RBI Guidelines</button>
                 </div>
                 <div class="input-actions-right">
                   <button type="button" class="voice-btn" id="voiceInputBtn" title="Voice Input">

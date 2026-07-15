@@ -1,10 +1,8 @@
-# GraniteGuard - AI Agent for Digital Financial Literacy
+# FinGranite - AI Agent for Digital Financial Literacy
 
-An intelligent, RAG-based AI agent dashboard designed to educate users on essential financial tools, UPI practices, budgeting, interest rates, and avoiding online scams. This project addresses **Problem Statement No. 7 - AI Agent for Digital Financial Literacy** under the AICTE-2026 IBM Skills Build university engagement program.
+An intelligent, RAG-based conversational AI agent designed to improve digital financial literacy in India. **FinGranite** provides accurate, multilingual guidance on UPI safety, online scam prevention, and basic financial concepts (like compound interest and the 50/30/20 budgeting rule). 
 
-The application is built with a premium, glassmorphic dark-theme design and works in **5 languages** (English, Hindi, Marathi, Tamil, Bengali). It can run in **Simulation Mode** out-of-the-box (no setup needed) or connect directly to **IBM Watsonx.ai** to call live **IBM Granite** foundation models.
-
----
+This project uses **IBM Watsonx (Granite 13B Chat)** for language modeling and a local RAG (Retrieval-Augmented Generation) pipeline for factual accuracy.
 
 ## 🌟 Key Features
 
